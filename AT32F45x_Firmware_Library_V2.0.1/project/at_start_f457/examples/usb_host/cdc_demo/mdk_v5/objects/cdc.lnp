@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp.sp
+".\objects\at32f45x_clock.o"
+".\objects\at32f45x_int.o"
+".\objects\main.o"
+".\objects\usbh_user.o"
+".\objects\at32f45x_board.o"
+".\objects\at32f45x_acc.o"
+".\objects\at32f45x_crm.o"
+".\objects\at32f45x_exint.o"
+".\objects\at32f45x_gpio.o"
+".\objects\at32f45x_misc.o"
+".\objects\at32f45x_pwc.o"
+".\objects\at32f45x_scfg.o"
+".\objects\at32f45x_usart.o"
+".\objects\at32f45x_usb.o"
+".\objects\system_at32f45x.o"
+".\objects\startup_at32f45x.o"
+".\objects\usb_core.o"
+".\objects\usbh_core.o"
+".\objects\usbh_ctrl.o"
+".\objects\usbh_int.o"
+".\objects\usbh_cdc_class.o"
+--library_type=microlib --strict --scatter ".\objects\cdc.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\listings\cdc.map" -o .\objects\cdc.axf

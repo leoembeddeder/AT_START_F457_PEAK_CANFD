@@ -1,0 +1,27 @@
+--cpu=Cortex-M4.fp.sp
+".\objects\at32f45x_clock.o"
+".\objects\at32f45x_int.o"
+".\objects\main.o"
+".\objects\at32f45x_board.o"
+".\objects\at32f45x_acc.o"
+".\objects\at32f45x_crm.o"
+".\objects\at32f45x_exint.o"
+".\objects\at32f45x_gpio.o"
+".\objects\at32f45x_misc.o"
+".\objects\at32f45x_pwc.o"
+".\objects\at32f45x_scfg.o"
+".\objects\at32f45x_tmr.o"
+".\objects\at32f45x_usart.o"
+".\objects\at32f45x_usb.o"
+".\objects\system_at32f45x.o"
+".\objects\startup_at32f45x.o"
+".\objects\usb_core.o"
+".\objects\usbd_core.o"
+".\objects\usbd_int.o"
+".\objects\usbd_sdr.o"
+".\objects\winusb_class.o"
+".\objects\winusb_desc.o"
+--library_type=microlib --strict --scatter ".\objects\winusb.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\listings\winusb.map" -o .\objects\winusb.axf

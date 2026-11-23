@@ -1,0 +1,1268 @@
+Component: Arm Compiler for Embedded 6.24 Tool: armlink [5f371500]
+
+==============================================================================
+
+Section Cross References
+
+    at32f45x_clock.o(.text.system_clock_config) refers to at32f45x_crm.o(.text.crm_reset) for crm_reset
+    at32f45x_clock.o(.text.system_clock_config) refers to at32f45x_crm.o(.text.crm_periph_clock_enable) for crm_periph_clock_enable
+    at32f45x_clock.o(.text.system_clock_config) refers to at32f45x_crm.o(.text.crm_clock_source_enable) for crm_clock_source_enable
+    at32f45x_clock.o(.text.system_clock_config) refers to at32f45x_crm.o(.text.crm_hext_stable_wait) for crm_hext_stable_wait
+    at32f45x_clock.o(.text.system_clock_config) refers to at32f45x_crm.o(.text.crm_pll_config) for crm_pll_config
+    at32f45x_clock.o(.text.system_clock_config) refers to at32f45x_crm.o(.text.crm_pllu_div_set) for crm_pllu_div_set
+    at32f45x_clock.o(.text.system_clock_config) refers to at32f45x_crm.o(.text.crm_pllu_output_set) for crm_pllu_output_set
+    at32f45x_clock.o(.text.system_clock_config) refers to at32f45x_crm.o(.text.crm_flag_get) for crm_flag_get
+    at32f45x_clock.o(.text.system_clock_config) refers to at32f45x_crm.o(.text.crm_ahb_div_set) for crm_ahb_div_set
+    at32f45x_clock.o(.text.system_clock_config) refers to at32f45x_crm.o(.text.crm_apb3_div_set) for crm_apb3_div_set
+    at32f45x_clock.o(.text.system_clock_config) refers to at32f45x_crm.o(.text.crm_apb2_div_set) for crm_apb2_div_set
+    at32f45x_clock.o(.text.system_clock_config) refers to at32f45x_crm.o(.text.crm_apb1_div_set) for crm_apb1_div_set
+    at32f45x_clock.o(.text.system_clock_config) refers to at32f45x_crm.o(.text.crm_auto_step_mode_enable) for crm_auto_step_mode_enable
+    at32f45x_clock.o(.text.system_clock_config) refers to at32f45x_crm.o(.text.crm_sysclk_switch) for crm_sysclk_switch
+    at32f45x_clock.o(.text.system_clock_config) refers to at32f45x_crm.o(.text.crm_sysclk_switch_status_get) for crm_sysclk_switch_status_get
+    at32f45x_clock.o(.text.system_clock_config) refers to system_at32f45x.o(.text.system_core_clock_update) for system_core_clock_update
+    at32f45x_clock.o(.ARM.exidx.text.system_clock_config) refers to at32f45x_clock.o(.text.system_clock_config) for [Anonymous Symbol]
+    at32f45x_int.o(.ARM.exidx.text.NMI_Handler) refers to at32f45x_int.o(.text.NMI_Handler) for [Anonymous Symbol]
+    at32f45x_int.o(.ARM.exidx.text.HardFault_Handler) refers to at32f45x_int.o(.text.HardFault_Handler) for [Anonymous Symbol]
+    at32f45x_int.o(.ARM.exidx.text.MemManage_Handler) refers to at32f45x_int.o(.text.MemManage_Handler) for [Anonymous Symbol]
+    at32f45x_int.o(.ARM.exidx.text.BusFault_Handler) refers to at32f45x_int.o(.text.BusFault_Handler) for [Anonymous Symbol]
+    at32f45x_int.o(.ARM.exidx.text.UsageFault_Handler) refers to at32f45x_int.o(.text.UsageFault_Handler) for [Anonymous Symbol]
+    at32f45x_int.o(.ARM.exidx.text.SVC_Handler) refers to at32f45x_int.o(.text.SVC_Handler) for [Anonymous Symbol]
+    at32f45x_int.o(.ARM.exidx.text.DebugMon_Handler) refers to at32f45x_int.o(.text.DebugMon_Handler) for [Anonymous Symbol]
+    at32f45x_int.o(.ARM.exidx.text.PendSV_Handler) refers to at32f45x_int.o(.text.PendSV_Handler) for [Anonymous Symbol]
+    at32f45x_int.o(.ARM.exidx.text.SysTick_Handler) refers to at32f45x_int.o(.text.SysTick_Handler) for [Anonymous Symbol]
+    at32f45x_int.o(.text.CAN1_TX_IRQHandler) refers to at32f45x_can.o(.text.can_interrupt_flag_get) for can_interrupt_flag_get
+    at32f45x_int.o(.text.CAN1_TX_IRQHandler) refers to at32f45x_can.o(.text.can_flag_clear) for can_flag_clear
+    at32f45x_int.o(.text.CAN1_TX_IRQHandler) refers to at32f45x_board.o(.text.at32_led_toggle) for at32_led_toggle
+    at32f45x_int.o(.ARM.exidx.text.CAN1_TX_IRQHandler) refers to at32f45x_int.o(.text.CAN1_TX_IRQHandler) for [Anonymous Symbol]
+    at32f45x_int.o(.text.CAN1_RX_IRQHandler) refers to at32f45x_can.o(.text.can_interrupt_flag_get) for can_interrupt_flag_get
+    at32f45x_int.o(.text.CAN1_RX_IRQHandler) refers to at32f45x_can.o(.text.can_flag_clear) for can_flag_clear
+    at32f45x_int.o(.text.CAN1_RX_IRQHandler) refers to at32f45x_can.o(.text.can_rxbuf_read) for can_rxbuf_read
+    at32f45x_int.o(.text.CAN1_RX_IRQHandler) refers to at32f45x_board.o(.text.at32_led_toggle) for at32_led_toggle
+    at32f45x_int.o(.ARM.exidx.text.CAN1_RX_IRQHandler) refers to at32f45x_int.o(.text.CAN1_RX_IRQHandler) for [Anonymous Symbol]
+    at32f45x_int.o(.text.CAN1_STAT_IRQHandler) refers to at32f45x_can.o(.text.can_interrupt_flag_get) for can_interrupt_flag_get
+    at32f45x_int.o(.text.CAN1_STAT_IRQHandler) refers to at32f45x_can.o(.text.can_flag_clear) for can_flag_clear
+    at32f45x_int.o(.text.CAN1_STAT_IRQHandler) refers to at32f45x_board.o(.text.at32_led_toggle) for at32_led_toggle
+    at32f45x_int.o(.text.CAN1_STAT_IRQHandler) refers to main.o(.text.ttcan_transmit_data) for ttcan_transmit_data
+    at32f45x_int.o(.ARM.exidx.text.CAN1_STAT_IRQHandler) refers to at32f45x_int.o(.text.CAN1_STAT_IRQHandler) for [Anonymous Symbol]
+    at32f45x_int.o(.text.CAN1_ERR_IRQHandler) refers to at32f45x_can.o(.text.can_interrupt_flag_get) for can_interrupt_flag_get
+    at32f45x_int.o(.text.CAN1_ERR_IRQHandler) refers to at32f45x_can.o(.text.can_flag_clear) for can_flag_clear
+    at32f45x_int.o(.ARM.exidx.text.CAN1_ERR_IRQHandler) refers to at32f45x_int.o(.text.CAN1_ERR_IRQHandler) for [Anonymous Symbol]
+    main.o(.text.can_configuration) refers to at32f45x_crm.o(.text.crm_flag_get) for crm_flag_get
+    main.o(.text.can_configuration) refers to at32f45x_crm.o(.text.crm_periph_clock_enable) for crm_periph_clock_enable
+    main.o(.text.can_configuration) refers to at32f45x_crm.o(.text.crm_can_clock_select) for crm_can_clock_select
+    main.o(.text.can_configuration) refers to at32f45x_can.o(.text.can_software_reset) for can_software_reset
+    main.o(.text.can_configuration) refers to at32f45x_can.o(.text.can_bittime_default_para_init) for can_bittime_default_para_init
+    main.o(.text.can_configuration) refers to at32f45x_can.o(.text.can_bittime_set) for can_bittime_set
+    main.o(.text.can_configuration) refers to at32f45x_can.o(.text.can_fd_iso_mode_enable) for can_fd_iso_mode_enable
+    main.o(.text.can_configuration) refers to at32f45x_can.o(.text.can_stb_transmit_mode_set) for can_stb_transmit_mode_set
+    main.o(.text.can_configuration) refers to at32f45x_can.o(.text.can_retransmission_limit_set) for can_retransmission_limit_set
+    main.o(.text.can_configuration) refers to at32f45x_can.o(.text.can_rearbitration_limit_set) for can_rearbitration_limit_set
+    main.o(.text.can_configuration) refers to at32f45x_can.o(.text.can_rxbuf_warning_set) for can_rxbuf_warning_set
+    main.o(.text.can_configuration) refers to at32f45x_can.o(.text.can_mode_set) for can_mode_set
+    main.o(.text.can_configuration) refers to at32f45x_misc.o(.text.nvic_irq_enable) for nvic_irq_enable
+    main.o(.text.can_configuration) refers to at32f45x_can.o(.text.can_interrupt_enable) for can_interrupt_enable
+    main.o(.ARM.exidx.text.can_configuration) refers to main.o(.text.can_configuration) for [Anonymous Symbol]
+    main.o(.text.ttcan_transmit_data) refers to memseta.o(.text) for __aeabi_memclr4
+    main.o(.text.ttcan_transmit_data) refers to main.o(.bss.ttcan_transmit_data.cnt) for ttcan_transmit_data.cnt
+    main.o(.text.ttcan_transmit_data) refers to at32f45x_can.o(.text.can_ttcan_txbuf_status_get) for can_ttcan_txbuf_status_get
+    main.o(.text.ttcan_transmit_data) refers to at32f45x_can.o(.text.can_ttcan_txbuf_write) for can_ttcan_txbuf_write
+    main.o(.text.ttcan_transmit_data) refers to at32f45x_can.o(.text.can_ttcan_trigger_set) for can_ttcan_trigger_set
+    main.o(.ARM.exidx.text.ttcan_transmit_data) refers to main.o(.text.ttcan_transmit_data) for [Anonymous Symbol]
+    main.o(.text.main) refers to at32f45x_clock.o(.text.system_clock_config) for system_clock_config
+    main.o(.text.main) refers to at32f45x_board.o(.text.at32_board_init) for at32_board_init
+    main.o(.text.main) refers to at32f45x_misc.o(.text.nvic_priority_group_config) for nvic_priority_group_config
+    main.o(.text.main) refers to at32f45x_crm.o(.text.crm_periph_clock_enable) for crm_periph_clock_enable
+    main.o(.text.main) refers to at32f45x_gpio.o(.text.gpio_default_para_init) for gpio_default_para_init
+    main.o(.text.main) refers to at32f45x_gpio.o(.text.gpio_init) for gpio_init
+    main.o(.text.main) refers to at32f45x_gpio.o(.text.gpio_pin_mux_config) for gpio_pin_mux_config
+    main.o(.text.main) refers to main.o(.text.can_configuration) for can_configuration
+    main.o(.text.main) refers to at32f45x_can.o(.text.can_ttcan_ref_message_set) for can_ttcan_ref_message_set
+    main.o(.text.main) refers to at32f45x_can.o(.text.can_ttcan_txbuf_enable) for can_ttcan_txbuf_enable
+    main.o(.text.main) refers to at32f45x_can.o(.text.can_ttcan_timer_div_set) for can_ttcan_timer_div_set
+    main.o(.text.main) refers to at32f45x_can.o(.text.can_ttcan_watch_trigger_set) for can_ttcan_watch_trigger_set
+    main.o(.text.main) refers to at32f45x_can.o(.text.can_ttcan_enable) for can_ttcan_enable
+    main.o(.text.main) refers to at32f45x_can.o(.text.can_ttcan_transmit_window_set) for can_ttcan_transmit_window_set
+    main.o(.text.main) refers to at32f45x_can.o(.text.can_ttcan_trigger_type_set) for can_ttcan_trigger_type_set
+    main.o(.text.main) refers to at32f45x_can.o(.text.can_ttcan_txbuf_transmit_set) for can_ttcan_txbuf_transmit_set
+    main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
+    at32f45x_board.o(.ARM.exidx.text._sys_exit) refers to at32f45x_board.o(.text._sys_exit) for [Anonymous Symbol]
+    at32f45x_board.o(.ARM.exidx.text._ttywrch) refers to at32f45x_board.o(.text._ttywrch) for [Anonymous Symbol]
+    at32f45x_board.o(.text.fputc) refers to at32f45x_usart.o(.text.usart_flag_get) for usart_flag_get
+    at32f45x_board.o(.text.fputc) refers to at32f45x_usart.o(.text.usart_data_transmit) for usart_data_transmit
+    at32f45x_board.o(.ARM.exidx.text.fputc) refers to at32f45x_board.o(.text.fputc) for [Anonymous Symbol]
+    at32f45x_board.o(.text.uart_print_init) refers to at32f45x_crm.o(.text.crm_periph_clock_enable) for crm_periph_clock_enable
+    at32f45x_board.o(.text.uart_print_init) refers to at32f45x_gpio.o(.text.gpio_default_para_init) for gpio_default_para_init
+    at32f45x_board.o(.text.uart_print_init) refers to at32f45x_gpio.o(.text.gpio_init) for gpio_init
+    at32f45x_board.o(.text.uart_print_init) refers to at32f45x_gpio.o(.text.gpio_pin_mux_config) for gpio_pin_mux_config
+    at32f45x_board.o(.text.uart_print_init) refers to at32f45x_usart.o(.text.usart_init) for usart_init
+    at32f45x_board.o(.text.uart_print_init) refers to at32f45x_usart.o(.text.usart_transmitter_enable) for usart_transmitter_enable
+    at32f45x_board.o(.text.uart_print_init) refers to at32f45x_usart.o(.text.usart_enable) for usart_enable
+    at32f45x_board.o(.ARM.exidx.text.uart_print_init) refers to at32f45x_board.o(.text.uart_print_init) for [Anonymous Symbol]
+    at32f45x_board.o(.text.at32_board_init) refers to at32f45x_misc.o(.text.systick_clock_source_config) for systick_clock_source_config
+    at32f45x_board.o(.text.at32_board_init) refers to system_at32f45x.o(.data.system_core_clock) for system_core_clock
+    at32f45x_board.o(.text.at32_board_init) refers to at32f45x_board.o(.bss.fac_us) for fac_us
+    at32f45x_board.o(.text.at32_board_init) refers to at32f45x_board.o(.bss.fac_ms) for fac_ms
+    at32f45x_board.o(.text.at32_board_init) refers to at32f45x_board.o(.data.led_gpio_crm_clk) for led_gpio_crm_clk
+    at32f45x_board.o(.text.at32_board_init) refers to at32f45x_crm.o(.text.crm_periph_clock_enable) for crm_periph_clock_enable
+    at32f45x_board.o(.text.at32_board_init) refers to at32f45x_gpio.o(.text.gpio_default_para_init) for gpio_default_para_init
+    at32f45x_board.o(.text.at32_board_init) refers to at32f45x_board.o(.data.led_gpio_pin) for led_gpio_pin
+    at32f45x_board.o(.text.at32_board_init) refers to at32f45x_board.o(.data.led_gpio_port) for led_gpio_port
+    at32f45x_board.o(.text.at32_board_init) refers to at32f45x_gpio.o(.text.gpio_init) for gpio_init
+    at32f45x_board.o(.ARM.exidx.text.at32_board_init) refers to at32f45x_board.o(.text.at32_board_init) for [Anonymous Symbol]
+    at32f45x_board.o(.text.delay_init) refers to at32f45x_misc.o(.text.systick_clock_source_config) for systick_clock_source_config
+    at32f45x_board.o(.text.delay_init) refers to system_at32f45x.o(.data.system_core_clock) for system_core_clock
+    at32f45x_board.o(.text.delay_init) refers to at32f45x_board.o(.bss.fac_us) for fac_us
+    at32f45x_board.o(.text.delay_init) refers to at32f45x_board.o(.bss.fac_ms) for fac_ms
+    at32f45x_board.o(.ARM.exidx.text.delay_init) refers to at32f45x_board.o(.text.delay_init) for [Anonymous Symbol]
+    at32f45x_board.o(.text.at32_led_init) refers to at32f45x_board.o(.data.led_gpio_crm_clk) for led_gpio_crm_clk
+    at32f45x_board.o(.text.at32_led_init) refers to at32f45x_crm.o(.text.crm_periph_clock_enable) for crm_periph_clock_enable
+    at32f45x_board.o(.text.at32_led_init) refers to at32f45x_gpio.o(.text.gpio_default_para_init) for gpio_default_para_init
+    at32f45x_board.o(.text.at32_led_init) refers to at32f45x_board.o(.data.led_gpio_pin) for led_gpio_pin
+    at32f45x_board.o(.text.at32_led_init) refers to at32f45x_board.o(.data.led_gpio_port) for led_gpio_port
+    at32f45x_board.o(.text.at32_led_init) refers to at32f45x_gpio.o(.text.gpio_init) for gpio_init
+    at32f45x_board.o(.ARM.exidx.text.at32_led_init) refers to at32f45x_board.o(.text.at32_led_init) for [Anonymous Symbol]
+    at32f45x_board.o(.text.at32_led_off) refers to at32f45x_board.o(.data.led_gpio_pin) for led_gpio_pin
+    at32f45x_board.o(.text.at32_led_off) refers to at32f45x_board.o(.data.led_gpio_port) for led_gpio_port
+    at32f45x_board.o(.ARM.exidx.text.at32_led_off) refers to at32f45x_board.o(.text.at32_led_off) for [Anonymous Symbol]
+    at32f45x_board.o(.text.at32_button_init) refers to at32f45x_crm.o(.text.crm_periph_clock_enable) for crm_periph_clock_enable
+    at32f45x_board.o(.text.at32_button_init) refers to at32f45x_gpio.o(.text.gpio_default_para_init) for gpio_default_para_init
+    at32f45x_board.o(.text.at32_button_init) refers to at32f45x_gpio.o(.text.gpio_init) for gpio_init
+    at32f45x_board.o(.ARM.exidx.text.at32_button_init) refers to at32f45x_board.o(.text.at32_button_init) for [Anonymous Symbol]
+    at32f45x_board.o(.text.at32_button_state) refers to at32f45x_gpio.o(.text.gpio_input_data_bit_read) for gpio_input_data_bit_read
+    at32f45x_board.o(.ARM.exidx.text.at32_button_state) refers to at32f45x_board.o(.text.at32_button_state) for [Anonymous Symbol]
+    at32f45x_board.o(.text.at32_button_press) refers to at32f45x_board.o(.bss.at32_button_press.pressed) for at32_button_press.pressed
+    at32f45x_board.o(.text.at32_button_press) refers to at32f45x_gpio.o(.text.gpio_input_data_bit_read) for gpio_input_data_bit_read
+    at32f45x_board.o(.text.at32_button_press) refers to at32f45x_board.o(.bss.fac_ms) for fac_ms
+    at32f45x_board.o(.ARM.exidx.text.at32_button_press) refers to at32f45x_board.o(.text.at32_button_press) for [Anonymous Symbol]
+    at32f45x_board.o(.text.delay_ms) refers to at32f45x_board.o(.bss.fac_ms) for fac_ms
+    at32f45x_board.o(.ARM.exidx.text.delay_ms) refers to at32f45x_board.o(.text.delay_ms) for [Anonymous Symbol]
+    at32f45x_board.o(.text.at32_led_on) refers to at32f45x_board.o(.data.led_gpio_pin) for led_gpio_pin
+    at32f45x_board.o(.text.at32_led_on) refers to at32f45x_board.o(.data.led_gpio_port) for led_gpio_port
+    at32f45x_board.o(.ARM.exidx.text.at32_led_on) refers to at32f45x_board.o(.text.at32_led_on) for [Anonymous Symbol]
+    at32f45x_board.o(.text.at32_led_toggle) refers to at32f45x_board.o(.data.led_gpio_pin) for led_gpio_pin
+    at32f45x_board.o(.text.at32_led_toggle) refers to at32f45x_board.o(.data.led_gpio_port) for led_gpio_port
+    at32f45x_board.o(.ARM.exidx.text.at32_led_toggle) refers to at32f45x_board.o(.text.at32_led_toggle) for [Anonymous Symbol]
+    at32f45x_board.o(.text.delay_us) refers to at32f45x_board.o(.bss.fac_us) for fac_us
+    at32f45x_board.o(.ARM.exidx.text.delay_us) refers to at32f45x_board.o(.text.delay_us) for [Anonymous Symbol]
+    at32f45x_board.o(.text.delay_sec) refers to at32f45x_board.o(.bss.fac_ms) for fac_ms
+    at32f45x_board.o(.ARM.exidx.text.delay_sec) refers to at32f45x_board.o(.text.delay_sec) for [Anonymous Symbol]
+    at32f45x_gpio.o(.text.gpio_reset) refers to at32f45x_crm.o(.text.crm_periph_reset) for crm_periph_reset
+    at32f45x_gpio.o(.ARM.exidx.text.gpio_reset) refers to at32f45x_gpio.o(.text.gpio_reset) for [Anonymous Symbol]
+    at32f45x_gpio.o(.ARM.exidx.text.gpio_init) refers to at32f45x_gpio.o(.text.gpio_init) for [Anonymous Symbol]
+    at32f45x_gpio.o(.ARM.exidx.text.gpio_default_para_init) refers to at32f45x_gpio.o(.text.gpio_default_para_init) for [Anonymous Symbol]
+    at32f45x_gpio.o(.ARM.exidx.text.gpio_input_data_bit_read) refers to at32f45x_gpio.o(.text.gpio_input_data_bit_read) for [Anonymous Symbol]
+    at32f45x_gpio.o(.ARM.exidx.text.gpio_input_data_read) refers to at32f45x_gpio.o(.text.gpio_input_data_read) for [Anonymous Symbol]
+    at32f45x_gpio.o(.ARM.exidx.text.gpio_output_data_bit_read) refers to at32f45x_gpio.o(.text.gpio_output_data_bit_read) for [Anonymous Symbol]
+    at32f45x_gpio.o(.ARM.exidx.text.gpio_output_data_read) refers to at32f45x_gpio.o(.text.gpio_output_data_read) for [Anonymous Symbol]
+    at32f45x_gpio.o(.ARM.exidx.text.gpio_bits_set) refers to at32f45x_gpio.o(.text.gpio_bits_set) for [Anonymous Symbol]
+    at32f45x_gpio.o(.ARM.exidx.text.gpio_bits_reset) refers to at32f45x_gpio.o(.text.gpio_bits_reset) for [Anonymous Symbol]
+    at32f45x_gpio.o(.ARM.exidx.text.gpio_bits_toggle) refers to at32f45x_gpio.o(.text.gpio_bits_toggle) for [Anonymous Symbol]
+    at32f45x_gpio.o(.ARM.exidx.text.gpio_bits_write) refers to at32f45x_gpio.o(.text.gpio_bits_write) for [Anonymous Symbol]
+    at32f45x_gpio.o(.ARM.exidx.text.gpio_port_wirte) refers to at32f45x_gpio.o(.text.gpio_port_wirte) for [Anonymous Symbol]
+    at32f45x_gpio.o(.ARM.exidx.text.gpio_pin_wp_config) refers to at32f45x_gpio.o(.text.gpio_pin_wp_config) for [Anonymous Symbol]
+    at32f45x_gpio.o(.ARM.exidx.text.gpio_pins_huge_driven_config) refers to at32f45x_gpio.o(.text.gpio_pins_huge_driven_config) for [Anonymous Symbol]
+    at32f45x_gpio.o(.ARM.exidx.text.gpio_pin_mux_config) refers to at32f45x_gpio.o(.text.gpio_pin_mux_config) for [Anonymous Symbol]
+    at32f45x_misc.o(.text.nvic_system_reset) refers to at32f45x_misc.o(.text.__NVIC_SystemReset) for __NVIC_SystemReset
+    at32f45x_misc.o(.ARM.exidx.text.nvic_system_reset) refers to at32f45x_misc.o(.text.nvic_system_reset) for [Anonymous Symbol]
+    at32f45x_misc.o(.ARM.exidx.text.__NVIC_SystemReset) refers to at32f45x_misc.o(.text.__NVIC_SystemReset) for [Anonymous Symbol]
+    at32f45x_misc.o(.ARM.exidx.text.nvic_irq_enable) refers to at32f45x_misc.o(.text.nvic_irq_enable) for [Anonymous Symbol]
+    at32f45x_misc.o(.ARM.exidx.text.nvic_irq_disable) refers to at32f45x_misc.o(.text.nvic_irq_disable) for [Anonymous Symbol]
+    at32f45x_misc.o(.ARM.exidx.text.nvic_priority_group_config) refers to at32f45x_misc.o(.text.nvic_priority_group_config) for [Anonymous Symbol]
+    at32f45x_misc.o(.ARM.exidx.text.nvic_vector_table_set) refers to at32f45x_misc.o(.text.nvic_vector_table_set) for [Anonymous Symbol]
+    at32f45x_misc.o(.ARM.exidx.text.nvic_lowpower_mode_config) refers to at32f45x_misc.o(.text.nvic_lowpower_mode_config) for [Anonymous Symbol]
+    at32f45x_misc.o(.ARM.exidx.text.systick_clock_source_config) refers to at32f45x_misc.o(.text.systick_clock_source_config) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_reset) refers to at32f45x_crm.o(.text.crm_reset) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_auto_step_mode_enable) refers to at32f45x_crm.o(.text.crm_auto_step_mode_enable) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_lext_bypass) refers to at32f45x_crm.o(.text.crm_lext_bypass) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_hext_bypass) refers to at32f45x_crm.o(.text.crm_hext_bypass) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_flag_get) refers to at32f45x_crm.o(.text.crm_flag_get) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_interrupt_flag_get) refers to at32f45x_crm.o(.text.crm_interrupt_flag_get) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_hext_stable_wait) refers to at32f45x_crm.o(.text.crm_hext_stable_wait) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_hick_clock_trimming_set) refers to at32f45x_crm.o(.text.crm_hick_clock_trimming_set) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_hick_clock_calibration_set) refers to at32f45x_crm.o(.text.crm_hick_clock_calibration_set) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_periph_clock_enable) refers to at32f45x_crm.o(.text.crm_periph_clock_enable) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_periph_reset) refers to at32f45x_crm.o(.text.crm_periph_reset) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_periph_lowpower_mode_enable) refers to at32f45x_crm.o(.text.crm_periph_lowpower_mode_enable) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_clock_source_enable) refers to at32f45x_crm.o(.text.crm_clock_source_enable) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_flag_clear) refers to at32f45x_crm.o(.text.crm_flag_clear) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_ertc_clock_select) refers to at32f45x_crm.o(.text.crm_ertc_clock_select) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_ertc_clock_enable) refers to at32f45x_crm.o(.text.crm_ertc_clock_enable) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_ahb_div_set) refers to at32f45x_crm.o(.text.crm_ahb_div_set) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_apb1_div_set) refers to at32f45x_crm.o(.text.crm_apb1_div_set) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_apb2_div_set) refers to at32f45x_crm.o(.text.crm_apb2_div_set) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_apb3_div_set) refers to at32f45x_crm.o(.text.crm_apb3_div_set) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_vbath_div_set) refers to at32f45x_crm.o(.text.crm_vbath_div_set) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_lextdrv_set) refers to at32f45x_crm.o(.text.crm_lextdrv_set) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_hextdrv_set) refers to at32f45x_crm.o(.text.crm_hextdrv_set) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_hext_sclk_div_set) refers to at32f45x_crm.o(.text.crm_hext_sclk_div_set) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_hick_sclk_div_set) refers to at32f45x_crm.o(.text.crm_hick_sclk_div_set) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_clock_failure_detection_enable) refers to at32f45x_crm.o(.text.crm_clock_failure_detection_enable) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_battery_powered_domain_reset) refers to at32f45x_crm.o(.text.crm_battery_powered_domain_reset) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_i2sf5_clock_select) refers to at32f45x_crm.o(.text.crm_i2sf5_clock_select) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_hick_sclk_frequency_select) refers to at32f45x_crm.o(.text.crm_hick_sclk_frequency_select) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_usb_clock_source_select) refers to at32f45x_crm.o(.text.crm_usb_clock_source_select) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_can_clock_select) refers to at32f45x_crm.o(.text.crm_can_clock_select) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_can_clock_get) refers to at32f45x_crm.o(.text.crm_can_clock_get) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_pll_config) refers to at32f45x_crm.o(.text.crm_pll_config) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_pllu_div_set) refers to at32f45x_crm.o(.text.crm_pllu_div_set) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_pllu_output_set) refers to at32f45x_crm.o(.text.crm_pllu_output_set) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_sysclk_switch) refers to at32f45x_crm.o(.text.crm_sysclk_switch) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_sysclk_switch_status_get) refers to at32f45x_crm.o(.text.crm_sysclk_switch_status_get) for [Anonymous Symbol]
+    at32f45x_crm.o(.text.crm_clocks_freq_get) refers to at32f45x_crm.o(.rodata.cst8) for crm_clocks_freq_get.ahb_apb2_div_table
+    at32f45x_crm.o(.ARM.exidx.text.crm_clocks_freq_get) refers to at32f45x_crm.o(.text.crm_clocks_freq_get) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_clock_out_set) refers to at32f45x_crm.o(.text.crm_clock_out_set) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_clkout_div_set) refers to at32f45x_crm.o(.text.crm_clkout_div_set) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_emac_output_pulse_set) refers to at32f45x_crm.o(.text.crm_emac_output_pulse_set) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_interrupt_enable) refers to at32f45x_crm.o(.text.crm_interrupt_enable) for [Anonymous Symbol]
+    at32f45x_crm.o(.ARM.exidx.text.crm_pll_parameter_calculate) refers to at32f45x_crm.o(.text.crm_pll_parameter_calculate) for [Anonymous Symbol]
+    at32f45x_usart.o(.text.usart_reset) refers to at32f45x_crm.o(.text.crm_periph_reset) for crm_periph_reset
+    at32f45x_usart.o(.ARM.exidx.text.usart_reset) refers to at32f45x_usart.o(.text.usart_reset) for [Anonymous Symbol]
+    at32f45x_usart.o(.text.usart_init) refers to at32f45x_crm.o(.text.crm_clocks_freq_get) for crm_clocks_freq_get
+    at32f45x_usart.o(.ARM.exidx.text.usart_init) refers to at32f45x_usart.o(.text.usart_init) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_parity_selection_config) refers to at32f45x_usart.o(.text.usart_parity_selection_config) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_enable) refers to at32f45x_usart.o(.text.usart_enable) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_transmitter_enable) refers to at32f45x_usart.o(.text.usart_transmitter_enable) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_receiver_enable) refers to at32f45x_usart.o(.text.usart_receiver_enable) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_clock_config) refers to at32f45x_usart.o(.text.usart_clock_config) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_clock_enable) refers to at32f45x_usart.o(.text.usart_clock_enable) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_interrupt_enable) refers to at32f45x_usart.o(.text.usart_interrupt_enable) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_dma_transmitter_enable) refers to at32f45x_usart.o(.text.usart_dma_transmitter_enable) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_dma_receiver_enable) refers to at32f45x_usart.o(.text.usart_dma_receiver_enable) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_wakeup_id_set) refers to at32f45x_usart.o(.text.usart_wakeup_id_set) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_wakeup_mode_set) refers to at32f45x_usart.o(.text.usart_wakeup_mode_set) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_receiver_mute_enable) refers to at32f45x_usart.o(.text.usart_receiver_mute_enable) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_break_bit_num_set) refers to at32f45x_usart.o(.text.usart_break_bit_num_set) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_lin_mode_enable) refers to at32f45x_usart.o(.text.usart_lin_mode_enable) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_data_transmit) refers to at32f45x_usart.o(.text.usart_data_transmit) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_data_receive) refers to at32f45x_usart.o(.text.usart_data_receive) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_break_send) refers to at32f45x_usart.o(.text.usart_break_send) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_smartcard_guard_time_set) refers to at32f45x_usart.o(.text.usart_smartcard_guard_time_set) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_irda_smartcard_division_set) refers to at32f45x_usart.o(.text.usart_irda_smartcard_division_set) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_smartcard_mode_enable) refers to at32f45x_usart.o(.text.usart_smartcard_mode_enable) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_smartcard_nack_set) refers to at32f45x_usart.o(.text.usart_smartcard_nack_set) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_single_line_halfduplex_select) refers to at32f45x_usart.o(.text.usart_single_line_halfduplex_select) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_irda_mode_enable) refers to at32f45x_usart.o(.text.usart_irda_mode_enable) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_irda_low_power_enable) refers to at32f45x_usart.o(.text.usart_irda_low_power_enable) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_hardware_flow_control_set) refers to at32f45x_usart.o(.text.usart_hardware_flow_control_set) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_flag_get) refers to at32f45x_usart.o(.text.usart_flag_get) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_interrupt_flag_get) refers to at32f45x_usart.o(.text.usart_interrupt_flag_get) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_flag_clear) refers to at32f45x_usart.o(.text.usart_flag_clear) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_rs485_delay_time_config) refers to at32f45x_usart.o(.text.usart_rs485_delay_time_config) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_transmit_receive_pin_swap) refers to at32f45x_usart.o(.text.usart_transmit_receive_pin_swap) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_id_bit_num_set) refers to at32f45x_usart.o(.text.usart_id_bit_num_set) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_de_polarity_set) refers to at32f45x_usart.o(.text.usart_de_polarity_set) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_rs485_mode_enable) refers to at32f45x_usart.o(.text.usart_rs485_mode_enable) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_msb_transmit_first_enable) refers to at32f45x_usart.o(.text.usart_msb_transmit_first_enable) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_dt_polarity_reverse) refers to at32f45x_usart.o(.text.usart_dt_polarity_reverse) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_transmit_pin_polarity_reverse) refers to at32f45x_usart.o(.text.usart_transmit_pin_polarity_reverse) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_receive_pin_polarity_reverse) refers to at32f45x_usart.o(.text.usart_receive_pin_polarity_reverse) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_receiver_timeout_detection_enable) refers to at32f45x_usart.o(.text.usart_receiver_timeout_detection_enable) for [Anonymous Symbol]
+    at32f45x_usart.o(.ARM.exidx.text.usart_receiver_timeout_value_set) refers to at32f45x_usart.o(.text.usart_receiver_timeout_value_set) for [Anonymous Symbol]
+    at32f45x_can.o(.text.can_reset) refers to at32f45x_crm.o(.text.crm_periph_reset) for crm_periph_reset
+    at32f45x_can.o(.ARM.exidx.text.can_reset) refers to at32f45x_can.o(.text.can_reset) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_software_reset) refers to at32f45x_can.o(.text.can_software_reset) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_fd_iso_mode_enable) refers to at32f45x_can.o(.text.can_fd_iso_mode_enable) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_mode_set) refers to at32f45x_can.o(.text.can_mode_set) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_standby_mode_enable) refers to at32f45x_can.o(.text.can_standby_mode_enable) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_restricted_operation_enable) refers to at32f45x_can.o(.text.can_restricted_operation_enable) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_bittime_default_para_init) refers to at32f45x_can.o(.text.can_bittime_default_para_init) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_bittime_set) refers to at32f45x_can.o(.text.can_bittime_set) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_retransmission_limit_set) refers to at32f45x_can.o(.text.can_retransmission_limit_set) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_rearbitration_limit_set) refers to at32f45x_can.o(.text.can_rearbitration_limit_set) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_timestamp_enable) refers to at32f45x_can.o(.text.can_timestamp_enable) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_timestamp_position_set) refers to at32f45x_can.o(.text.can_timestamp_position_set) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_transmit_timestamp_get) refers to at32f45x_can.o(.text.can_transmit_timestamp_get) for [Anonymous Symbol]
+    at32f45x_can.o(.text.can_txbuf_write) refers to at32f45x_can.o(.rodata.cst16) for dlc_to_bytes
+    at32f45x_can.o(.ARM.exidx.text.can_txbuf_write) refers to at32f45x_can.o(.text.can_txbuf_write) for [Anonymous Symbol]
+    at32f45x_can.o(.text.can_rxbuf_read) refers to at32f45x_can.o(.rodata.cst16) for dlc_to_bytes
+    at32f45x_can.o(.ARM.exidx.text.can_rxbuf_read) refers to at32f45x_can.o(.text.can_rxbuf_read) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_filter_enable) refers to at32f45x_can.o(.text.can_filter_enable) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_filter_default_para_init) refers to at32f45x_can.o(.text.can_filter_default_para_init) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_filter_set) refers to at32f45x_can.o(.text.can_filter_set) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_rxbuf_release) refers to at32f45x_can.o(.text.can_rxbuf_release) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_arbitration_lost_position_get) refers to at32f45x_can.o(.text.can_arbitration_lost_position_get) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_rxbuf_warning_set) refers to at32f45x_can.o(.text.can_rxbuf_warning_set) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_error_warning_set) refers to at32f45x_can.o(.text.can_error_warning_set) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_receive_error_counter_get) refers to at32f45x_can.o(.text.can_receive_error_counter_get) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_transmit_error_counter_get) refers to at32f45x_can.o(.text.can_transmit_error_counter_get) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_kind_error_get) refers to at32f45x_can.o(.text.can_kind_error_get) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_busoff_get) refers to at32f45x_can.o(.text.can_busoff_get) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_busoff_reset) refers to at32f45x_can.o(.text.can_busoff_reset) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_stb_transmit_mode_set) refers to at32f45x_can.o(.text.can_stb_transmit_mode_set) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_stb_status_get) refers to at32f45x_can.o(.text.can_stb_status_get) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_transmit_status_get) refers to at32f45x_can.o(.text.can_transmit_status_get) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_rxbuf_status_get) refers to at32f45x_can.o(.text.can_rxbuf_status_get) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_rxbuf_overflow_mode_set) refers to at32f45x_can.o(.text.can_rxbuf_overflow_mode_set) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_receive_all_enable) refers to at32f45x_can.o(.text.can_receive_all_enable) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_transmit_abort) refers to at32f45x_can.o(.text.can_transmit_abort) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_stb_clear) refers to at32f45x_can.o(.text.can_stb_clear) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_txbuf_transmit) refers to at32f45x_can.o(.text.can_txbuf_transmit) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_ttcan_ref_message_set) refers to at32f45x_can.o(.text.can_ttcan_ref_message_set) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_ttcan_timer_div_set) refers to at32f45x_can.o(.text.can_ttcan_timer_div_set) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_ttcan_enable) refers to at32f45x_can.o(.text.can_ttcan_enable) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_ttcan_txbuf_enable) refers to at32f45x_can.o(.text.can_ttcan_txbuf_enable) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_ttcan_trigger_type_set) refers to at32f45x_can.o(.text.can_ttcan_trigger_type_set) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_ttcan_trigger_set) refers to at32f45x_can.o(.text.can_ttcan_trigger_set) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_ttcan_watch_trigger_set) refers to at32f45x_can.o(.text.can_ttcan_watch_trigger_set) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_ttcan_txbuf_status_set) refers to at32f45x_can.o(.text.can_ttcan_txbuf_status_set) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_ttcan_txbuf_status_get) refers to at32f45x_can.o(.text.can_ttcan_txbuf_status_get) for [Anonymous Symbol]
+    at32f45x_can.o(.text.can_ttcan_txbuf_write) refers to at32f45x_can.o(.rodata.cst16) for dlc_to_bytes
+    at32f45x_can.o(.ARM.exidx.text.can_ttcan_txbuf_write) refers to at32f45x_can.o(.text.can_ttcan_txbuf_write) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_ttcan_txbuf_transmit_set) refers to at32f45x_can.o(.text.can_ttcan_txbuf_transmit_set) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_ttcan_transmit_window_set) refers to at32f45x_can.o(.text.can_ttcan_transmit_window_set) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_interrupt_enable) refers to at32f45x_can.o(.text.can_interrupt_enable) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_flag_get) refers to at32f45x_can.o(.text.can_flag_get) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_interrupt_flag_get) refers to at32f45x_can.o(.text.can_interrupt_flag_get) for [Anonymous Symbol]
+    at32f45x_can.o(.ARM.exidx.text.can_flag_clear) refers to at32f45x_can.o(.text.can_flag_clear) for [Anonymous Symbol]
+    system_at32f45x.o(.text.SystemInit) refers to at32f45x_crm.o(.text.crm_auto_step_mode_enable) for crm_auto_step_mode_enable
+    system_at32f45x.o(.ARM.exidx.text.SystemInit) refers to system_at32f45x.o(.text.SystemInit) for [Anonymous Symbol]
+    system_at32f45x.o(.text.system_core_clock_update) refers to at32f45x_crm.o(.text.crm_sysclk_switch_status_get) for crm_sysclk_switch_status_get
+    system_at32f45x.o(.text.system_core_clock_update) refers to system_at32f45x.o(.data.system_core_clock) for system_core_clock
+    system_at32f45x.o(.ARM.exidx.text.system_core_clock_update) refers to system_at32f45x.o(.text.system_core_clock_update) for [Anonymous Symbol]
+    startup_at32f45x.o(RESET) refers to startup_at32f45x.o(STACK) for __initial_sp
+    startup_at32f45x.o(RESET) refers to startup_at32f45x.o(.text) for Reset_Handler
+    startup_at32f45x.o(RESET) refers to at32f45x_int.o(.text.NMI_Handler) for NMI_Handler
+    startup_at32f45x.o(RESET) refers to at32f45x_int.o(.text.HardFault_Handler) for HardFault_Handler
+    startup_at32f45x.o(RESET) refers to at32f45x_int.o(.text.MemManage_Handler) for MemManage_Handler
+    startup_at32f45x.o(RESET) refers to at32f45x_int.o(.text.BusFault_Handler) for BusFault_Handler
+    startup_at32f45x.o(RESET) refers to at32f45x_int.o(.text.UsageFault_Handler) for UsageFault_Handler
+    startup_at32f45x.o(RESET) refers to at32f45x_int.o(.text.SVC_Handler) for SVC_Handler
+    startup_at32f45x.o(RESET) refers to at32f45x_int.o(.text.DebugMon_Handler) for DebugMon_Handler
+    startup_at32f45x.o(RESET) refers to at32f45x_int.o(.text.PendSV_Handler) for PendSV_Handler
+    startup_at32f45x.o(RESET) refers to at32f45x_int.o(.text.SysTick_Handler) for SysTick_Handler
+    startup_at32f45x.o(RESET) refers to at32f45x_int.o(.text.CAN1_TX_IRQHandler) for CAN1_TX_IRQHandler
+    startup_at32f45x.o(RESET) refers to at32f45x_int.o(.text.CAN1_RX_IRQHandler) for CAN1_RX_IRQHandler
+    startup_at32f45x.o(RESET) refers to at32f45x_int.o(.text.CAN1_STAT_IRQHandler) for CAN1_STAT_IRQHandler
+    startup_at32f45x.o(RESET) refers to at32f45x_int.o(.text.CAN1_ERR_IRQHandler) for CAN1_ERR_IRQHandler
+    startup_at32f45x.o(.text) refers to system_at32f45x.o(.text.SystemInit) for SystemInit
+    startup_at32f45x.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_at32f45x.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_at32f45x.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(.text.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(.text.main) for main
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing at32f45x_clock.o(.text), (0 bytes).
+    Removing at32f45x_clock.o(.ARM.exidx.text.system_clock_config), (8 bytes).
+    Removing at32f45x_int.o(.text), (0 bytes).
+    Removing at32f45x_int.o(.ARM.exidx.text.NMI_Handler), (8 bytes).
+    Removing at32f45x_int.o(.ARM.exidx.text.HardFault_Handler), (8 bytes).
+    Removing at32f45x_int.o(.ARM.exidx.text.MemManage_Handler), (8 bytes).
+    Removing at32f45x_int.o(.ARM.exidx.text.BusFault_Handler), (8 bytes).
+    Removing at32f45x_int.o(.ARM.exidx.text.UsageFault_Handler), (8 bytes).
+    Removing at32f45x_int.o(.ARM.exidx.text.SVC_Handler), (8 bytes).
+    Removing at32f45x_int.o(.ARM.exidx.text.DebugMon_Handler), (8 bytes).
+    Removing at32f45x_int.o(.ARM.exidx.text.PendSV_Handler), (8 bytes).
+    Removing at32f45x_int.o(.ARM.exidx.text.SysTick_Handler), (8 bytes).
+    Removing at32f45x_int.o(.ARM.exidx.text.CAN1_TX_IRQHandler), (8 bytes).
+    Removing at32f45x_int.o(.ARM.exidx.text.CAN1_RX_IRQHandler), (8 bytes).
+    Removing at32f45x_int.o(.ARM.exidx.text.CAN1_STAT_IRQHandler), (8 bytes).
+    Removing at32f45x_int.o(.ARM.exidx.text.CAN1_ERR_IRQHandler), (8 bytes).
+    Removing main.o(.text), (0 bytes).
+    Removing main.o(.ARM.exidx.text.can_configuration), (8 bytes).
+    Removing main.o(.ARM.exidx.text.ttcan_transmit_data), (8 bytes).
+    Removing main.o(.ARM.exidx.text.main), (8 bytes).
+    Removing main.o(.ARM.use_no_argv), (4 bytes).
+    Removing at32f45x_board.o(.text), (0 bytes).
+    Removing at32f45x_board.o(.text._sys_exit), (2 bytes).
+    Removing at32f45x_board.o(.ARM.exidx.text._sys_exit), (8 bytes).
+    Removing at32f45x_board.o(.text._ttywrch), (2 bytes).
+    Removing at32f45x_board.o(.ARM.exidx.text._ttywrch), (8 bytes).
+    Removing at32f45x_board.o(.text.fputc), (48 bytes).
+    Removing at32f45x_board.o(.ARM.exidx.text.fputc), (8 bytes).
+    Removing at32f45x_board.o(.text.uart_print_init), (110 bytes).
+    Removing at32f45x_board.o(.ARM.exidx.text.uart_print_init), (8 bytes).
+    Removing at32f45x_board.o(.ARM.exidx.text.at32_board_init), (8 bytes).
+    Removing at32f45x_board.o(.text.delay_init), (62 bytes).
+    Removing at32f45x_board.o(.ARM.exidx.text.delay_init), (8 bytes).
+    Removing at32f45x_board.o(.text.at32_led_init), (76 bytes).
+    Removing at32f45x_board.o(.ARM.exidx.text.at32_led_init), (8 bytes).
+    Removing at32f45x_board.o(.text.at32_led_off), (38 bytes).
+    Removing at32f45x_board.o(.ARM.exidx.text.at32_led_off), (8 bytes).
+    Removing at32f45x_board.o(.text.at32_button_init), (52 bytes).
+    Removing at32f45x_board.o(.ARM.exidx.text.at32_button_init), (8 bytes).
+    Removing at32f45x_board.o(.text.at32_button_state), (12 bytes).
+    Removing at32f45x_board.o(.ARM.exidx.text.at32_button_state), (8 bytes).
+    Removing at32f45x_board.o(.text.at32_button_press), (134 bytes).
+    Removing at32f45x_board.o(.ARM.exidx.text.at32_button_press), (8 bytes).
+    Removing at32f45x_board.o(.text.delay_ms), (102 bytes).
+    Removing at32f45x_board.o(.ARM.exidx.text.delay_ms), (8 bytes).
+    Removing at32f45x_board.o(.text.at32_led_on), (38 bytes).
+    Removing at32f45x_board.o(.ARM.exidx.text.at32_led_on), (8 bytes).
+    Removing at32f45x_board.o(.ARM.exidx.text.at32_led_toggle), (8 bytes).
+    Removing at32f45x_board.o(.text.delay_us), (60 bytes).
+    Removing at32f45x_board.o(.ARM.exidx.text.delay_us), (8 bytes).
+    Removing at32f45x_board.o(.text.delay_sec), (186 bytes).
+    Removing at32f45x_board.o(.ARM.exidx.text.delay_sec), (8 bytes).
+    Removing at32f45x_board.o(.bss.at32_button_press.pressed), (1 bytes).
+    Removing at32f45x_board.o(.bss.__stdout), (84 bytes).
+    Removing at32f45x_gpio.o(.text), (0 bytes).
+    Removing at32f45x_gpio.o(.text.gpio_reset), (44 bytes).
+    Removing at32f45x_gpio.o(.ARM.exidx.text.gpio_reset), (8 bytes).
+    Removing at32f45x_gpio.o(.ARM.exidx.text.gpio_init), (8 bytes).
+    Removing at32f45x_gpio.o(.ARM.exidx.text.gpio_default_para_init), (8 bytes).
+    Removing at32f45x_gpio.o(.text.gpio_input_data_bit_read), (14 bytes).
+    Removing at32f45x_gpio.o(.ARM.exidx.text.gpio_input_data_bit_read), (8 bytes).
+    Removing at32f45x_gpio.o(.text.gpio_input_data_read), (6 bytes).
+    Removing at32f45x_gpio.o(.ARM.exidx.text.gpio_input_data_read), (8 bytes).
+    Removing at32f45x_gpio.o(.text.gpio_output_data_bit_read), (10 bytes).
+    Removing at32f45x_gpio.o(.ARM.exidx.text.gpio_output_data_bit_read), (8 bytes).
+    Removing at32f45x_gpio.o(.text.gpio_output_data_read), (6 bytes).
+    Removing at32f45x_gpio.o(.ARM.exidx.text.gpio_output_data_read), (8 bytes).
+    Removing at32f45x_gpio.o(.text.gpio_bits_set), (4 bytes).
+    Removing at32f45x_gpio.o(.ARM.exidx.text.gpio_bits_set), (8 bytes).
+    Removing at32f45x_gpio.o(.text.gpio_bits_reset), (4 bytes).
+    Removing at32f45x_gpio.o(.ARM.exidx.text.gpio_bits_reset), (8 bytes).
+    Removing at32f45x_gpio.o(.text.gpio_bits_toggle), (4 bytes).
+    Removing at32f45x_gpio.o(.ARM.exidx.text.gpio_bits_toggle), (8 bytes).
+    Removing at32f45x_gpio.o(.text.gpio_bits_write), (12 bytes).
+    Removing at32f45x_gpio.o(.ARM.exidx.text.gpio_bits_write), (8 bytes).
+    Removing at32f45x_gpio.o(.text.gpio_port_wirte), (4 bytes).
+    Removing at32f45x_gpio.o(.ARM.exidx.text.gpio_port_wirte), (8 bytes).
+    Removing at32f45x_gpio.o(.text.gpio_pin_wp_config), (16 bytes).
+    Removing at32f45x_gpio.o(.ARM.exidx.text.gpio_pin_wp_config), (8 bytes).
+    Removing at32f45x_gpio.o(.text.gpio_pins_huge_driven_config), (16 bytes).
+    Removing at32f45x_gpio.o(.ARM.exidx.text.gpio_pins_huge_driven_config), (8 bytes).
+    Removing at32f45x_gpio.o(.ARM.exidx.text.gpio_pin_mux_config), (8 bytes).
+    Removing at32f45x_misc.o(.text), (0 bytes).
+    Removing at32f45x_misc.o(.text.nvic_system_reset), (4 bytes).
+    Removing at32f45x_misc.o(.ARM.exidx.text.nvic_system_reset), (8 bytes).
+    Removing at32f45x_misc.o(.text.__NVIC_SystemReset), (36 bytes).
+    Removing at32f45x_misc.o(.ARM.exidx.text.__NVIC_SystemReset), (8 bytes).
+    Removing at32f45x_misc.o(.ARM.exidx.text.nvic_irq_enable), (8 bytes).
+    Removing at32f45x_misc.o(.text.nvic_irq_disable), (42 bytes).
+    Removing at32f45x_misc.o(.ARM.exidx.text.nvic_irq_disable), (8 bytes).
+    Removing at32f45x_misc.o(.ARM.exidx.text.nvic_priority_group_config), (8 bytes).
+    Removing at32f45x_misc.o(.text.nvic_vector_table_set), (24 bytes).
+    Removing at32f45x_misc.o(.ARM.exidx.text.nvic_vector_table_set), (8 bytes).
+    Removing at32f45x_misc.o(.text.nvic_lowpower_mode_config), (24 bytes).
+    Removing at32f45x_misc.o(.ARM.exidx.text.nvic_lowpower_mode_config), (8 bytes).
+    Removing at32f45x_misc.o(.ARM.exidx.text.systick_clock_source_config), (8 bytes).
+    Removing at32f45x_crm.o(.text), (0 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_reset), (8 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_auto_step_mode_enable), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_lext_bypass), (26 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_lext_bypass), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_hext_bypass), (26 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_hext_bypass), (8 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_flag_get), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_interrupt_flag_get), (164 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_interrupt_flag_get), (8 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_hext_stable_wait), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_hick_clock_trimming_set), (26 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_hick_clock_trimming_set), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_hick_clock_calibration_set), (44 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_hick_clock_calibration_set), (8 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_periph_clock_enable), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_periph_reset), (40 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_periph_reset), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_periph_lowpower_mode_enable), (40 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_periph_lowpower_mode_enable), (8 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_clock_source_enable), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_flag_clear), (124 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_flag_clear), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_ertc_clock_select), (28 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_ertc_clock_select), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_ertc_clock_enable), (26 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_ertc_clock_enable), (8 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_ahb_div_set), (8 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_apb1_div_set), (8 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_apb2_div_set), (8 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_apb3_div_set), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_vbath_div_set), (26 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_vbath_div_set), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_lextdrv_set), (26 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_lextdrv_set), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_hextdrv_set), (26 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_hextdrv_set), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_hext_sclk_div_set), (26 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_hext_sclk_div_set), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_hick_sclk_div_set), (26 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_hick_sclk_div_set), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_clock_failure_detection_enable), (26 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_clock_failure_detection_enable), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_battery_powered_domain_reset), (26 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_battery_powered_domain_reset), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_i2sf5_clock_select), (26 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_i2sf5_clock_select), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_hick_sclk_frequency_select), (26 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_hick_sclk_frequency_select), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_usb_clock_source_select), (26 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_usb_clock_source_select), (8 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_can_clock_select), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_can_clock_get), (36 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_can_clock_get), (8 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_pll_config), (8 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_pllu_div_set), (8 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_pllu_output_set), (8 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_sysclk_switch), (8 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_sysclk_switch_status_get), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_clocks_freq_get), (220 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_clocks_freq_get), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_clock_out_set), (48 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_clock_out_set), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_clkout_div_set), (42 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_clkout_div_set), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_emac_output_pulse_set), (26 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_emac_output_pulse_set), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_interrupt_enable), (24 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_interrupt_enable), (8 bytes).
+    Removing at32f45x_crm.o(.text.crm_pll_parameter_calculate), (184 bytes).
+    Removing at32f45x_crm.o(.ARM.exidx.text.crm_pll_parameter_calculate), (8 bytes).
+    Removing at32f45x_crm.o(.rodata.cst8), (8 bytes).
+    Removing at32f45x_usart.o(.text), (0 bytes).
+    Removing at32f45x_usart.o(.text.usart_reset), (62 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_reset), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_init), (160 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_init), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_parity_selection_config), (58 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_parity_selection_config), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_enable), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_enable), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_transmitter_enable), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_transmitter_enable), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_receiver_enable), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_receiver_enable), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_clock_config), (54 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_clock_config), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_clock_enable), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_clock_enable), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_interrupt_enable), (32 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_interrupt_enable), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_dma_transmitter_enable), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_dma_transmitter_enable), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_dma_receiver_enable), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_dma_receiver_enable), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_wakeup_id_set), (50 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_wakeup_id_set), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_wakeup_mode_set), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_wakeup_mode_set), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_receiver_mute_enable), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_receiver_mute_enable), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_break_bit_num_set), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_break_bit_num_set), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_lin_mode_enable), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_lin_mode_enable), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_data_transmit), (8 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_data_transmit), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_data_receive), (6 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_data_receive), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_break_send), (10 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_break_send), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_smartcard_guard_time_set), (14 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_smartcard_guard_time_set), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_irda_smartcard_division_set), (12 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_irda_smartcard_division_set), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_smartcard_mode_enable), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_smartcard_mode_enable), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_smartcard_nack_set), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_smartcard_nack_set), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_single_line_halfduplex_select), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_single_line_halfduplex_select), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_irda_mode_enable), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_irda_mode_enable), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_irda_low_power_enable), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_irda_low_power_enable), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_hardware_flow_control_set), (66 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_hardware_flow_control_set), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_flag_get), (10 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_flag_get), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_interrupt_flag_get), (232 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_interrupt_flag_get), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_flag_clear), (44 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_flag_clear), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_rs485_delay_time_config), (34 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_rs485_delay_time_config), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_transmit_receive_pin_swap), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_transmit_receive_pin_swap), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_id_bit_num_set), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_id_bit_num_set), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_de_polarity_set), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_de_polarity_set), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_rs485_mode_enable), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_rs485_mode_enable), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_msb_transmit_first_enable), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_msb_transmit_first_enable), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_dt_polarity_reverse), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_dt_polarity_reverse), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_transmit_pin_polarity_reverse), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_transmit_pin_polarity_reverse), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_receive_pin_polarity_reverse), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_receive_pin_polarity_reverse), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_receiver_timeout_detection_enable), (18 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_receiver_timeout_detection_enable), (8 bytes).
+    Removing at32f45x_usart.o(.text.usart_receiver_timeout_value_set), (10 bytes).
+    Removing at32f45x_usart.o(.ARM.exidx.text.usart_receiver_timeout_value_set), (8 bytes).
+    Removing at32f45x_can.o(.text), (0 bytes).
+    Removing at32f45x_can.o(.text.can_reset), (42 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_reset), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_software_reset), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_fd_iso_mode_enable), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_mode_set), (8 bytes).
+    Removing at32f45x_can.o(.text.can_standby_mode_enable), (44 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_standby_mode_enable), (8 bytes).
+    Removing at32f45x_can.o(.text.can_restricted_operation_enable), (18 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_restricted_operation_enable), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_bittime_default_para_init), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_bittime_set), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_retransmission_limit_set), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_rearbitration_limit_set), (8 bytes).
+    Removing at32f45x_can.o(.text.can_timestamp_enable), (18 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_timestamp_enable), (8 bytes).
+    Removing at32f45x_can.o(.text.can_timestamp_position_set), (18 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_timestamp_position_set), (8 bytes).
+    Removing at32f45x_can.o(.text.can_transmit_timestamp_get), (4 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_transmit_timestamp_get), (8 bytes).
+    Removing at32f45x_can.o(.text.can_txbuf_write), (298 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_txbuf_write), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_rxbuf_read), (8 bytes).
+    Removing at32f45x_can.o(.text.can_filter_enable), (58 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_filter_enable), (8 bytes).
+    Removing at32f45x_can.o(.text.can_filter_default_para_init), (36 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_filter_default_para_init), (8 bytes).
+    Removing at32f45x_can.o(.text.can_filter_set), (338 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_filter_set), (8 bytes).
+    Removing at32f45x_can.o(.text.can_rxbuf_release), (28 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_rxbuf_release), (8 bytes).
+    Removing at32f45x_can.o(.text.can_arbitration_lost_position_get), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_arbitration_lost_position_get), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_rxbuf_warning_set), (8 bytes).
+    Removing at32f45x_can.o(.text.can_error_warning_set), (10 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_error_warning_set), (8 bytes).
+    Removing at32f45x_can.o(.text.can_receive_error_counter_get), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_receive_error_counter_get), (8 bytes).
+    Removing at32f45x_can.o(.text.can_transmit_error_counter_get), (6 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_transmit_error_counter_get), (8 bytes).
+    Removing at32f45x_can.o(.text.can_kind_error_get), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_kind_error_get), (8 bytes).
+    Removing at32f45x_can.o(.text.can_busoff_get), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_busoff_get), (8 bytes).
+    Removing at32f45x_can.o(.text.can_busoff_reset), (10 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_busoff_reset), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_stb_transmit_mode_set), (8 bytes).
+    Removing at32f45x_can.o(.text.can_stb_status_get), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_stb_status_get), (8 bytes).
+    Removing at32f45x_can.o(.text.can_transmit_status_get), (28 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_transmit_status_get), (8 bytes).
+    Removing at32f45x_can.o(.text.can_rxbuf_status_get), (18 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_rxbuf_status_get), (8 bytes).
+    Removing at32f45x_can.o(.text.can_rxbuf_overflow_mode_set), (18 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_rxbuf_overflow_mode_set), (8 bytes).
+    Removing at32f45x_can.o(.text.can_receive_all_enable), (18 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_receive_all_enable), (8 bytes).
+    Removing at32f45x_can.o(.text.can_transmit_abort), (16 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_transmit_abort), (8 bytes).
+    Removing at32f45x_can.o(.text.can_stb_clear), (30 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_stb_clear), (8 bytes).
+    Removing at32f45x_can.o(.text.can_txbuf_transmit), (86 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_txbuf_transmit), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_ttcan_ref_message_set), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_ttcan_timer_div_set), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_ttcan_enable), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_ttcan_txbuf_enable), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_ttcan_trigger_type_set), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_ttcan_trigger_set), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_ttcan_watch_trigger_set), (8 bytes).
+    Removing at32f45x_can.o(.text.can_ttcan_txbuf_status_set), (42 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_ttcan_txbuf_status_set), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_ttcan_txbuf_status_get), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_ttcan_txbuf_write), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_ttcan_txbuf_transmit_set), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_ttcan_transmit_window_set), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_interrupt_enable), (8 bytes).
+    Removing at32f45x_can.o(.text.can_flag_get), (10 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_flag_get), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_interrupt_flag_get), (8 bytes).
+    Removing at32f45x_can.o(.ARM.exidx.text.can_flag_clear), (8 bytes).
+    Removing system_at32f45x.o(.text), (0 bytes).
+    Removing system_at32f45x.o(.ARM.exidx.text.SystemInit), (8 bytes).
+    Removing system_at32f45x.o(.ARM.exidx.text.system_core_clock_update), (8 bytes).
+    Removing startup_at32f45x.o(HEAP), (512 bytes).
+
+336 unused section(s) (total 7265 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  useno.o ABSOLUTE
+    ..\..\..\..\..\..\libraries\cmsis\cm4\device_support\startup\mdk\startup_at32f45x.s 0x00000000   Number         0  startup_at32f45x.o ABSOLUTE
+    at32f45x_board.c                         0x00000000   Number         0  at32f45x_board.o ABSOLUTE
+    at32f45x_can.c                           0x00000000   Number         0  at32f45x_can.o ABSOLUTE
+    at32f45x_clock.c                         0x00000000   Number         0  at32f45x_clock.o ABSOLUTE
+    at32f45x_crm.c                           0x00000000   Number         0  at32f45x_crm.o ABSOLUTE
+    at32f45x_gpio.c                          0x00000000   Number         0  at32f45x_gpio.o ABSOLUTE
+    at32f45x_int.c                           0x00000000   Number         0  at32f45x_int.o ABSOLUTE
+    at32f45x_misc.c                          0x00000000   Number         0  at32f45x_misc.o ABSOLUTE
+    at32f45x_usart.c                         0x00000000   Number         0  at32f45x_usart.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    system_at32f45x.c                        0x00000000   Number         0  system_at32f45x.o ABSOLUTE
+    RESET                                    0x08000000   Section      480  startup_at32f45x.o(RESET)
+    .ARM.Collect$$$$00000000                 0x080001e0   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x080001e0   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x080001e4   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x080001e8   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x080001e8   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x080001e8   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    __lit__00000000                          0x080001f0   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .ARM.Collect$$$$0000000D                 0x080001f0   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x080001f0   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x080001f0   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    $v0                                      0x080001f4   Number         0  startup_at32f45x.o(.text)
+    .text                                    0x080001f4   Section       36  startup_at32f45x.o(.text)
+    .text                                    0x08000218   Section        0  memseta.o(.text)
+    .text                                    0x0800023c   Section       48  init.o(.text)
+    [Anonymous Symbol]                       0x0800026c   Section        0  at32f45x_int.o(.text.BusFault_Handler)
+    [Anonymous Symbol]                       0x08000270   Section        0  at32f45x_int.o(.text.CAN1_ERR_IRQHandler)
+    [Anonymous Symbol]                       0x08000298   Section        0  at32f45x_int.o(.text.CAN1_RX_IRQHandler)
+    [Anonymous Symbol]                       0x080002fc   Section        0  at32f45x_int.o(.text.CAN1_STAT_IRQHandler)
+    [Anonymous Symbol]                       0x0800035c   Section        0  at32f45x_int.o(.text.CAN1_TX_IRQHandler)
+    [Anonymous Symbol]                       0x08000388   Section        0  at32f45x_int.o(.text.DebugMon_Handler)
+    [Anonymous Symbol]                       0x0800038c   Section        0  at32f45x_int.o(.text.HardFault_Handler)
+    [Anonymous Symbol]                       0x08000390   Section        0  at32f45x_int.o(.text.MemManage_Handler)
+    [Anonymous Symbol]                       0x08000394   Section        0  at32f45x_int.o(.text.NMI_Handler)
+    [Anonymous Symbol]                       0x08000398   Section        0  at32f45x_int.o(.text.PendSV_Handler)
+    [Anonymous Symbol]                       0x0800039c   Section        0  at32f45x_int.o(.text.SVC_Handler)
+    [Anonymous Symbol]                       0x080003a0   Section        0  at32f45x_int.o(.text.SysTick_Handler)
+    [Anonymous Symbol]                       0x080003a4   Section        0  system_at32f45x.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x0800041c   Section        0  at32f45x_int.o(.text.UsageFault_Handler)
+    [Anonymous Symbol]                       0x08000420   Section        0  at32f45x_board.o(.text.at32_board_init)
+    [Anonymous Symbol]                       0x08000530   Section        0  at32f45x_board.o(.text.at32_led_toggle)
+    [Anonymous Symbol]                       0x08000558   Section        0  at32f45x_can.o(.text.can_bittime_default_para_init)
+    [Anonymous Symbol]                       0x08000574   Section        0  at32f45x_can.o(.text.can_bittime_set)
+    [Anonymous Symbol]                       0x080005fc   Section        0  main.o(.text.can_configuration)
+    [Anonymous Symbol]                       0x080006f4   Section        0  at32f45x_can.o(.text.can_fd_iso_mode_enable)
+    [Anonymous Symbol]                       0x08000708   Section        0  at32f45x_can.o(.text.can_flag_clear)
+    [Anonymous Symbol]                       0x0800070c   Section        0  at32f45x_can.o(.text.can_interrupt_enable)
+    [Anonymous Symbol]                       0x08000720   Section        0  at32f45x_can.o(.text.can_interrupt_flag_get)
+    [Anonymous Symbol]                       0x08000738   Section        0  at32f45x_can.o(.text.can_mode_set)
+    [Anonymous Symbol]                       0x080007d8   Section        0  at32f45x_can.o(.text.can_rearbitration_limit_set)
+    [Anonymous Symbol]                       0x080007ec   Section        0  at32f45x_can.o(.text.can_retransmission_limit_set)
+    [Anonymous Symbol]                       0x08000800   Section        0  at32f45x_can.o(.text.can_rxbuf_read)
+    [Anonymous Symbol]                       0x080008d8   Section        0  at32f45x_can.o(.text.can_rxbuf_warning_set)
+    [Anonymous Symbol]                       0x080008ec   Section        0  at32f45x_can.o(.text.can_software_reset)
+    [Anonymous Symbol]                       0x08000900   Section        0  at32f45x_can.o(.text.can_stb_transmit_mode_set)
+    [Anonymous Symbol]                       0x08000914   Section        0  at32f45x_can.o(.text.can_ttcan_enable)
+    [Anonymous Symbol]                       0x08000928   Section        0  at32f45x_can.o(.text.can_ttcan_ref_message_set)
+    [Anonymous Symbol]                       0x08000954   Section        0  at32f45x_can.o(.text.can_ttcan_timer_div_set)
+    [Anonymous Symbol]                       0x08000968   Section        0  at32f45x_can.o(.text.can_ttcan_transmit_window_set)
+    [Anonymous Symbol]                       0x0800097c   Section        0  at32f45x_can.o(.text.can_ttcan_trigger_set)
+    [Anonymous Symbol]                       0x08000980   Section        0  at32f45x_can.o(.text.can_ttcan_trigger_type_set)
+    [Anonymous Symbol]                       0x08000994   Section        0  at32f45x_can.o(.text.can_ttcan_txbuf_enable)
+    [Anonymous Symbol]                       0x080009a8   Section        0  at32f45x_can.o(.text.can_ttcan_txbuf_status_get)
+    [Anonymous Symbol]                       0x080009c0   Section        0  at32f45x_can.o(.text.can_ttcan_txbuf_transmit_set)
+    [Anonymous Symbol]                       0x080009cc   Section        0  at32f45x_can.o(.text.can_ttcan_txbuf_write)
+    [Anonymous Symbol]                       0x08000ae0   Section        0  at32f45x_can.o(.text.can_ttcan_watch_trigger_set)
+    [Anonymous Symbol]                       0x08000ae4   Section        0  at32f45x_crm.o(.text.crm_ahb_div_set)
+    [Anonymous Symbol]                       0x08000b14   Section        0  at32f45x_crm.o(.text.crm_apb1_div_set)
+    [Anonymous Symbol]                       0x08000b30   Section        0  at32f45x_crm.o(.text.crm_apb2_div_set)
+    [Anonymous Symbol]                       0x08000b4c   Section        0  at32f45x_crm.o(.text.crm_apb3_div_set)
+    [Anonymous Symbol]                       0x08000b68   Section        0  at32f45x_crm.o(.text.crm_auto_step_mode_enable)
+    [Anonymous Symbol]                       0x08000b80   Section        0  at32f45x_crm.o(.text.crm_can_clock_select)
+    [Anonymous Symbol]                       0x08000bbc   Section        0  at32f45x_crm.o(.text.crm_clock_source_enable)
+    [Anonymous Symbol]                       0x08000c38   Section        0  at32f45x_crm.o(.text.crm_flag_get)
+    [Anonymous Symbol]                       0x08000c54   Section        0  at32f45x_crm.o(.text.crm_hext_stable_wait)
+    [Anonymous Symbol]                       0x08000c78   Section        0  at32f45x_crm.o(.text.crm_periph_clock_enable)
+    [Anonymous Symbol]                       0x08000ca0   Section        0  at32f45x_crm.o(.text.crm_pll_config)
+    [Anonymous Symbol]                       0x08000cec   Section        0  at32f45x_crm.o(.text.crm_pllu_div_set)
+    [Anonymous Symbol]                       0x08000d08   Section        0  at32f45x_crm.o(.text.crm_pllu_output_set)
+    [Anonymous Symbol]                       0x08000d24   Section        0  at32f45x_crm.o(.text.crm_reset)
+    [Anonymous Symbol]                       0x08000d90   Section        0  at32f45x_crm.o(.text.crm_sysclk_switch)
+    [Anonymous Symbol]                       0x08000db8   Section        0  at32f45x_crm.o(.text.crm_sysclk_switch_status_get)
+    [Anonymous Symbol]                       0x08000dc8   Section        0  at32f45x_gpio.o(.text.gpio_default_para_init)
+    [Anonymous Symbol]                       0x08000dd8   Section        0  at32f45x_gpio.o(.text.gpio_init)
+    [Anonymous Symbol]                       0x08000e54   Section        0  at32f45x_gpio.o(.text.gpio_pin_mux_config)
+    [Anonymous Symbol]                       0x08000e7c   Section        0  main.o(.text.main)
+    [Anonymous Symbol]                       0x08000f50   Section        0  at32f45x_misc.o(.text.nvic_irq_enable)
+    [Anonymous Symbol]                       0x08000fc8   Section        0  at32f45x_misc.o(.text.nvic_priority_group_config)
+    [Anonymous Symbol]                       0x08000fe8   Section        0  at32f45x_clock.o(.text.system_clock_config)
+    [Anonymous Symbol]                       0x08001090   Section        0  system_at32f45x.o(.text.system_core_clock_update)
+    system_core_clock_update.pll_fp_table    0x08001100   Number         0  system_at32f45x.o(.text.system_core_clock_update)
+    system_core_clock_update.sys_ahb_div_table 0x08001110   Number         0  system_at32f45x.o(.text.system_core_clock_update)
+    [Anonymous Symbol]                       0x08001120   Section        0  at32f45x_misc.o(.text.systick_clock_source_config)
+    [Anonymous Symbol]                       0x08001138   Section        0  main.o(.text.ttcan_transmit_data)
+    i.__scatterload_copy                     0x080011b0   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x080011be   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x080011c0   Section       14  handlers.o(i.__scatterload_zeroinit)
+    dlc_to_bytes                             0x080011ce   Data          16  at32f45x_can.o(.rodata.cst16)
+    [Anonymous Symbol]                       0x080011ce   Section        0  at32f45x_can.o(.rodata.cst16)
+    fac_ms                                   0x20000028   Data           4  at32f45x_board.o(.bss.fac_ms)
+    [Anonymous Symbol]                       0x20000028   Section        0  at32f45x_board.o(.bss.fac_ms)
+    fac_us                                   0x2000002c   Data           4  at32f45x_board.o(.bss.fac_us)
+    [Anonymous Symbol]                       0x2000002c   Section        0  at32f45x_board.o(.bss.fac_us)
+    ttcan_transmit_data.cnt                  0x20000030   Data           1  main.o(.bss.ttcan_transmit_data.cnt)
+    [Anonymous Symbol]                       0x20000030   Section        0  main.o(.bss.ttcan_transmit_data.cnt)
+    STACK                                    0x20000038   Section     1024  startup_at32f45x.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __use_no_errno                           0x00000000   Number         0  useno.o ABSOLUTE
+    __use_no_exception_handling              0x00000000   Number         0  useno.o ABSOLUTE
+    __use_no_fp                              0x00000000   Number         0  useno.o ABSOLUTE
+    __use_no_heap                            0x00000000   Number         0  useno.o ABSOLUTE
+    __use_no_heap_region                     0x00000000   Number         0  useno.o ABSOLUTE
+    __use_no_semihosting                     0x00000000   Number         0  useno.o ABSOLUTE
+    __use_no_semihosting_swi                 0x00000000   Number         0  useno.o ABSOLUTE
+    __use_no_signal_handling                 0x00000000   Number         0  useno.o ABSOLUTE
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_Size                           0x000001e0   Number         0  startup_at32f45x.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  startup_at32f45x.o(RESET)
+    __Vectors_End                            0x080001e0   Data           0  startup_at32f45x.o(RESET)
+    __main                                   0x080001e1   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x080001e1   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x080001e5   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x080001e9   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x080001e9   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x080001e9   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x080001e9   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x080001f1   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x080001f1   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x080001f5   Thumb Code     8  startup_at32f45x.o(.text)
+    ACC_IRQHandler                           0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    ADC1_2_IRQHandler                        0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    AES_IRQHandler                           0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    CAN2_ERR_IRQHandler                      0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    CAN2_RX_IRQHandler                       0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    CAN2_STAT_IRQHandler                     0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    CAN2_TX_IRQHandler                       0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    CAN3_ERR_IRQHandler                      0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    CAN3_RX_IRQHandler                       0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    CAN3_STAT_IRQHandler                     0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    CAN3_TX_IRQHandler                       0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    CRM_IRQHandler                           0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    DMA1_Channel1_IRQHandler                 0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    DMA1_Channel2_IRQHandler                 0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    DMA1_Channel3_IRQHandler                 0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    DMA1_Channel4_IRQHandler                 0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    DMA1_Channel5_IRQHandler                 0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    DMA1_Channel6_IRQHandler                 0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    DMA1_Channel7_IRQHandler                 0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    DMA2_Channel1_IRQHandler                 0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    DMA2_Channel2_IRQHandler                 0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    DMA2_Channel3_IRQHandler                 0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    DMA2_Channel4_IRQHandler                 0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    DMA2_Channel5_IRQHandler                 0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    DMA2_Channel6_IRQHandler                 0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    DMA2_Channel7_IRQHandler                 0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    DMAMUX_IRQHandler                        0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    EMAC_IRQHandler                          0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    EMAC_WKUP_IRQHandler                     0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    ERTCAlarm_IRQHandler                     0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    ERTC_WKUP_IRQHandler                     0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    EXINT0_IRQHandler                        0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    EXINT15_10_IRQHandler                    0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    EXINT1_IRQHandler                        0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    EXINT2_IRQHandler                        0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    EXINT3_IRQHandler                        0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    EXINT4_IRQHandler                        0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    EXINT9_5_IRQHandler                      0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    FLASH_IRQHandler                         0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    FPU_IRQHandler                           0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    I2C1_ERR_IRQHandler                      0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    I2C1_EVT_IRQHandler                      0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    I2C2_ERR_IRQHandler                      0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    I2C2_EVT_IRQHandler                      0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    I2C3_ERR_IRQHandler                      0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    I2C3_EVT_IRQHandler                      0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    I2SF5_IRQHandler                         0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    OTGFS1_IRQHandler                        0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    OTGFS1_WKUP_IRQHandler                   0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    PVM_IRQHandler                           0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    QSPI1_IRQHandler                         0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    SDIO1_IRQHandler                         0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    SPI1_IRQHandler                          0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    SPI2_I2S2EXT_IRQHandler                  0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    SPI3_I2S3EXT_IRQHandler                  0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    SPI4_IRQHandler                          0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    TAMP_STAMP_IRQHandler                    0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    TMR1_BRK_TMR9_IRQHandler                 0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    TMR1_CH_IRQHandler                       0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    TMR1_OVF_TMR10_IRQHandler                0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    TMR1_TRG_HALL_TMR11_IRQHandler           0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    TMR2_GLOBAL_IRQHandler                   0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    TMR3_GLOBAL_IRQHandler                   0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    TMR4_GLOBAL_IRQHandler                   0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    TMR5_GLOBAL_IRQHandler                   0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    TMR6_DAC_GLOBAL_IRQHandler               0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    TMR7_GLOBAL_IRQHandler                   0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    TMR8_BRK_TMR12_IRQHandler                0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    TMR8_CH_IRQHandler                       0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    TMR8_OVF_TMR13_IRQHandler                0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    TMR8_TRG_HALL_TMR14_IRQHandler           0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    TRNG_IRQHandler                          0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    USART1_IRQHandler                        0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    USART2_IRQHandler                        0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    USART3_IRQHandler                        0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    USART4_IRQHandler                        0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    USART5_IRQHandler                        0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    USART6_IRQHandler                        0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    USART7_IRQHandler                        0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    USART8_IRQHandler                        0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    WWDT_IRQHandler                          0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    XMC_IRQHandler                           0x0800020f   Thumb Code     0  startup_at32f45x.o(.text)
+    __aeabi_memset                           0x08000219   Thumb Code    14  memseta.o(.text)
+    __aeabi_memset4                          0x08000219   Thumb Code     0  memseta.o(.text)
+    __aeabi_memset8                          0x08000219   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr                           0x08000227   Thumb Code     4  memseta.o(.text)
+    __aeabi_memclr4                          0x08000227   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr8                          0x08000227   Thumb Code     0  memseta.o(.text)
+    _memset$wrapper                          0x0800022b   Thumb Code    18  memseta.o(.text)
+    __scatterload                            0x0800023d   Thumb Code    38  init.o(.text)
+    __scatterload_rt2                        0x0800023d   Thumb Code     0  init.o(.text)
+    BusFault_Handler                         0x0800026d   Thumb Code     2  at32f45x_int.o(.text.BusFault_Handler)
+    CAN1_ERR_IRQHandler                      0x08000271   Thumb Code    40  at32f45x_int.o(.text.CAN1_ERR_IRQHandler)
+    CAN1_RX_IRQHandler                       0x08000299   Thumb Code    98  at32f45x_int.o(.text.CAN1_RX_IRQHandler)
+    CAN1_STAT_IRQHandler                     0x080002fd   Thumb Code    94  at32f45x_int.o(.text.CAN1_STAT_IRQHandler)
+    CAN1_TX_IRQHandler                       0x0800035d   Thumb Code    42  at32f45x_int.o(.text.CAN1_TX_IRQHandler)
+    DebugMon_Handler                         0x08000389   Thumb Code     2  at32f45x_int.o(.text.DebugMon_Handler)
+    HardFault_Handler                        0x0800038d   Thumb Code     2  at32f45x_int.o(.text.HardFault_Handler)
+    MemManage_Handler                        0x08000391   Thumb Code     2  at32f45x_int.o(.text.MemManage_Handler)
+    NMI_Handler                              0x08000395   Thumb Code     2  at32f45x_int.o(.text.NMI_Handler)
+    PendSV_Handler                           0x08000399   Thumb Code     2  at32f45x_int.o(.text.PendSV_Handler)
+    SVC_Handler                              0x0800039d   Thumb Code     2  at32f45x_int.o(.text.SVC_Handler)
+    SysTick_Handler                          0x080003a1   Thumb Code     2  at32f45x_int.o(.text.SysTick_Handler)
+    SystemInit                               0x080003a5   Thumb Code   120  system_at32f45x.o(.text.SystemInit)
+    UsageFault_Handler                       0x0800041d   Thumb Code     2  at32f45x_int.o(.text.UsageFault_Handler)
+    at32_board_init                          0x08000421   Thumb Code   270  at32f45x_board.o(.text.at32_board_init)
+    at32_led_toggle                          0x08000531   Thumb Code    38  at32f45x_board.o(.text.at32_led_toggle)
+    can_bittime_default_para_init            0x08000559   Thumb Code    28  at32f45x_can.o(.text.can_bittime_default_para_init)
+    can_bittime_set                          0x08000575   Thumb Code   134  at32f45x_can.o(.text.can_bittime_set)
+    can_configuration                        0x080005fd   Thumb Code   248  main.o(.text.can_configuration)
+    can_fd_iso_mode_enable                   0x080006f5   Thumb Code    18  at32f45x_can.o(.text.can_fd_iso_mode_enable)
+    can_flag_clear                           0x08000709   Thumb Code     4  at32f45x_can.o(.text.can_flag_clear)
+    can_interrupt_enable                     0x0800070d   Thumb Code    20  at32f45x_can.o(.text.can_interrupt_enable)
+    can_interrupt_flag_get                   0x08000721   Thumb Code    22  at32f45x_can.o(.text.can_interrupt_flag_get)
+    can_mode_set                             0x08000739   Thumb Code   158  at32f45x_can.o(.text.can_mode_set)
+    can_rearbitration_limit_set              0x080007d9   Thumb Code    18  at32f45x_can.o(.text.can_rearbitration_limit_set)
+    can_retransmission_limit_set             0x080007ed   Thumb Code    18  at32f45x_can.o(.text.can_retransmission_limit_set)
+    can_rxbuf_read                           0x08000801   Thumb Code   214  at32f45x_can.o(.text.can_rxbuf_read)
+    can_rxbuf_warning_set                    0x080008d9   Thumb Code    18  at32f45x_can.o(.text.can_rxbuf_warning_set)
+    can_software_reset                       0x080008ed   Thumb Code    18  at32f45x_can.o(.text.can_software_reset)
+    can_stb_transmit_mode_set                0x08000901   Thumb Code    18  at32f45x_can.o(.text.can_stb_transmit_mode_set)
+    can_ttcan_enable                         0x08000915   Thumb Code    18  at32f45x_can.o(.text.can_ttcan_enable)
+    can_ttcan_ref_message_set                0x08000929   Thumb Code    44  at32f45x_can.o(.text.can_ttcan_ref_message_set)
+    can_ttcan_timer_div_set                  0x08000955   Thumb Code    18  at32f45x_can.o(.text.can_ttcan_timer_div_set)
+    can_ttcan_transmit_window_set            0x08000969   Thumb Code    18  at32f45x_can.o(.text.can_ttcan_transmit_window_set)
+    can_ttcan_trigger_set                    0x0800097d   Thumb Code     4  at32f45x_can.o(.text.can_ttcan_trigger_set)
+    can_ttcan_trigger_type_set               0x08000981   Thumb Code    18  at32f45x_can.o(.text.can_ttcan_trigger_type_set)
+    can_ttcan_txbuf_enable                   0x08000995   Thumb Code    18  at32f45x_can.o(.text.can_ttcan_txbuf_enable)
+    can_ttcan_txbuf_status_get               0x080009a9   Thumb Code    24  at32f45x_can.o(.text.can_ttcan_txbuf_status_get)
+    can_ttcan_txbuf_transmit_set             0x080009c1   Thumb Code    10  at32f45x_can.o(.text.can_ttcan_txbuf_transmit_set)
+    can_ttcan_txbuf_write                    0x080009cd   Thumb Code   274  at32f45x_can.o(.text.can_ttcan_txbuf_write)
+    can_ttcan_watch_trigger_set              0x08000ae1   Thumb Code     4  at32f45x_can.o(.text.can_ttcan_watch_trigger_set)
+    crm_ahb_div_set                          0x08000ae5   Thumb Code    46  at32f45x_crm.o(.text.crm_ahb_div_set)
+    crm_apb1_div_set                         0x08000b15   Thumb Code    26  at32f45x_crm.o(.text.crm_apb1_div_set)
+    crm_apb2_div_set                         0x08000b31   Thumb Code    26  at32f45x_crm.o(.text.crm_apb2_div_set)
+    crm_apb3_div_set                         0x08000b4d   Thumb Code    26  at32f45x_crm.o(.text.crm_apb3_div_set)
+    crm_auto_step_mode_enable                0x08000b69   Thumb Code    24  at32f45x_crm.o(.text.crm_auto_step_mode_enable)
+    crm_can_clock_select                     0x08000b81   Thumb Code    48  at32f45x_crm.o(.text.crm_can_clock_select)
+    crm_clock_source_enable                  0x08000bbd   Thumb Code   122  at32f45x_crm.o(.text.crm_clock_source_enable)
+    crm_flag_get                             0x08000c39   Thumb Code    26  at32f45x_crm.o(.text.crm_flag_get)
+    crm_hext_stable_wait                     0x08000c55   Thumb Code    36  at32f45x_crm.o(.text.crm_hext_stable_wait)
+    crm_periph_clock_enable                  0x08000c79   Thumb Code    40  at32f45x_crm.o(.text.crm_periph_clock_enable)
+    crm_pll_config                           0x08000ca1   Thumb Code    76  at32f45x_crm.o(.text.crm_pll_config)
+    crm_pllu_div_set                         0x08000ced   Thumb Code    26  at32f45x_crm.o(.text.crm_pllu_div_set)
+    crm_pllu_output_set                      0x08000d09   Thumb Code    26  at32f45x_crm.o(.text.crm_pllu_output_set)
+    crm_reset                                0x08000d25   Thumb Code   106  at32f45x_crm.o(.text.crm_reset)
+    crm_sysclk_switch                        0x08000d91   Thumb Code    38  at32f45x_crm.o(.text.crm_sysclk_switch)
+    crm_sysclk_switch_status_get             0x08000db9   Thumb Code    16  at32f45x_crm.o(.text.crm_sysclk_switch_status_get)
+    gpio_default_para_init                   0x08000dc9   Thumb Code    14  at32f45x_gpio.o(.text.gpio_default_para_init)
+    gpio_init                                0x08000dd9   Thumb Code   122  at32f45x_gpio.o(.text.gpio_init)
+    gpio_pin_mux_config                      0x08000e55   Thumb Code    40  at32f45x_gpio.o(.text.gpio_pin_mux_config)
+    main                                     0x08000e7d   Thumb Code   210  main.o(.text.main)
+    nvic_irq_enable                          0x08000f51   Thumb Code   118  at32f45x_misc.o(.text.nvic_irq_enable)
+    nvic_priority_group_config               0x08000fc9   Thumb Code    32  at32f45x_misc.o(.text.nvic_priority_group_config)
+    system_clock_config                      0x08000fe9   Thumb Code   166  at32f45x_clock.o(.text.system_clock_config)
+    system_core_clock_update                 0x08001091   Thumb Code   112  system_at32f45x.o(.text.system_core_clock_update)
+    systick_clock_source_config              0x08001121   Thumb Code    24  at32f45x_misc.o(.text.systick_clock_source_config)
+    ttcan_transmit_data                      0x08001139   Thumb Code   120  main.o(.text.ttcan_transmit_data)
+    __scatterload_copy                       0x080011b1   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x080011bf   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x080011c1   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    Region$$Table$$Base                      0x080011e0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08001200   Number         0  anon$$obj.o(Region$$Table)
+    led_gpio_crm_clk                         0x20000000   Data          12  at32f45x_board.o(.data.led_gpio_crm_clk)
+    led_gpio_pin                             0x2000000c   Data           6  at32f45x_board.o(.data.led_gpio_pin)
+    led_gpio_port                            0x20000014   Data          12  at32f45x_board.o(.data.led_gpio_port)
+    system_core_clock                        0x20000020   Data           4  system_at32f45x.o(.data.system_core_clock)
+    __initial_sp                             0x20000438   Data           0  startup_at32f45x.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x080001e1
+
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00001228, Max: 0x00080000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00001200, Max: 0x00080000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x000001e0   Data   RO          480    RESET               startup_at32f45x.o
+    0x080001e0   0x080001e0   0x00000000   Code   RO          487  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080001e0   0x080001e0   0x00000004   Code   RO          492    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080001e4   0x080001e4   0x00000004   Code   RO          495    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080001e8   0x080001e8   0x00000000   Code   RO          497    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080001e8   0x080001e8   0x00000000   Code   RO          499    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080001e8   0x080001e8   0x00000008   Code   RO          500    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080001f0   0x080001f0   0x00000000   Code   RO          502    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x080001f0   0x080001f0   0x00000000   Code   RO          504    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x080001f0   0x080001f0   0x00000004   Code   RO          493    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x080001f4   0x080001f4   0x00000024   Code   RO          481    .text               startup_at32f45x.o
+    0x08000218   0x08000218   0x00000024   Code   RO          490    .text               mc_w.l(memseta.o)
+    0x0800023c   0x0800023c   0x00000030   Code   RO          506    .text               mc_w.l(init.o)
+    0x0800026c   0x0800026c   0x00000002   Code   RO           16    .text.BusFault_Handler  at32f45x_int.o
+    0x0800026e   0x0800026e   0x00000002   PAD
+    0x08000270   0x08000270   0x00000028   Code   RO           34    .text.CAN1_ERR_IRQHandler  at32f45x_int.o
+    0x08000298   0x08000298   0x00000062   Code   RO           30    .text.CAN1_RX_IRQHandler  at32f45x_int.o
+    0x080002fa   0x080002fa   0x00000002   PAD
+    0x080002fc   0x080002fc   0x0000005e   Code   RO           32    .text.CAN1_STAT_IRQHandler  at32f45x_int.o
+    0x0800035a   0x0800035a   0x00000002   PAD
+    0x0800035c   0x0800035c   0x0000002a   Code   RO           28    .text.CAN1_TX_IRQHandler  at32f45x_int.o
+    0x08000386   0x08000386   0x00000002   PAD
+    0x08000388   0x08000388   0x00000002   Code   RO           22    .text.DebugMon_Handler  at32f45x_int.o
+    0x0800038a   0x0800038a   0x00000002   PAD
+    0x0800038c   0x0800038c   0x00000002   Code   RO           12    .text.HardFault_Handler  at32f45x_int.o
+    0x0800038e   0x0800038e   0x00000002   PAD
+    0x08000390   0x08000390   0x00000002   Code   RO           14    .text.MemManage_Handler  at32f45x_int.o
+    0x08000392   0x08000392   0x00000002   PAD
+    0x08000394   0x08000394   0x00000002   Code   RO           10    .text.NMI_Handler   at32f45x_int.o
+    0x08000396   0x08000396   0x00000002   PAD
+    0x08000398   0x08000398   0x00000002   Code   RO           24    .text.PendSV_Handler  at32f45x_int.o
+    0x0800039a   0x0800039a   0x00000002   PAD
+    0x0800039c   0x0800039c   0x00000002   Code   RO           20    .text.SVC_Handler   at32f45x_int.o
+    0x0800039e   0x0800039e   0x00000002   PAD
+    0x080003a0   0x080003a0   0x00000002   Code   RO           26    .text.SysTick_Handler  at32f45x_int.o
+    0x080003a2   0x080003a2   0x00000002   PAD
+    0x080003a4   0x080003a4   0x00000078   Code   RO          466    .text.SystemInit    system_at32f45x.o
+    0x0800041c   0x0800041c   0x00000002   Code   RO           18    .text.UsageFault_Handler  at32f45x_int.o
+    0x0800041e   0x0800041e   0x00000002   PAD
+    0x08000420   0x08000420   0x0000010e   Code   RO           67    .text.at32_board_init  at32f45x_board.o
+    0x0800052e   0x0800052e   0x00000002   PAD
+    0x08000530   0x08000530   0x00000026   Code   RO           85    .text.at32_led_toggle  at32f45x_board.o
+    0x08000556   0x08000556   0x00000002   PAD
+    0x08000558   0x08000558   0x0000001c   Code   RO          365    .text.can_bittime_default_para_init  at32f45x_can.o
+    0x08000574   0x08000574   0x00000086   Code   RO          367    .text.can_bittime_set  at32f45x_can.o
+    0x080005fa   0x080005fa   0x00000002   PAD
+    0x080005fc   0x080005fc   0x000000f8   Code   RO           43    .text.can_configuration  main.o
+    0x080006f4   0x080006f4   0x00000012   Code   RO          357    .text.can_fd_iso_mode_enable  at32f45x_can.o
+    0x08000706   0x08000706   0x00000002   PAD
+    0x08000708   0x08000708   0x00000004   Code   RO          455    .text.can_flag_clear  at32f45x_can.o
+    0x0800070c   0x0800070c   0x00000014   Code   RO          449    .text.can_interrupt_enable  at32f45x_can.o
+    0x08000720   0x08000720   0x00000016   Code   RO          453    .text.can_interrupt_flag_get  at32f45x_can.o
+    0x08000736   0x08000736   0x00000002   PAD
+    0x08000738   0x08000738   0x0000009e   Code   RO          359    .text.can_mode_set  at32f45x_can.o
+    0x080007d6   0x080007d6   0x00000002   PAD
+    0x080007d8   0x080007d8   0x00000012   Code   RO          371    .text.can_rearbitration_limit_set  at32f45x_can.o
+    0x080007ea   0x080007ea   0x00000002   PAD
+    0x080007ec   0x080007ec   0x00000012   Code   RO          369    .text.can_retransmission_limit_set  at32f45x_can.o
+    0x080007fe   0x080007fe   0x00000002   PAD
+    0x08000800   0x08000800   0x000000d6   Code   RO          381    .text.can_rxbuf_read  at32f45x_can.o
+    0x080008d6   0x080008d6   0x00000002   PAD
+    0x080008d8   0x080008d8   0x00000012   Code   RO          393    .text.can_rxbuf_warning_set  at32f45x_can.o
+    0x080008ea   0x080008ea   0x00000002   PAD
+    0x080008ec   0x080008ec   0x00000012   Code   RO          355    .text.can_software_reset  at32f45x_can.o
+    0x080008fe   0x080008fe   0x00000002   PAD
+    0x08000900   0x08000900   0x00000012   Code   RO          407    .text.can_stb_transmit_mode_set  at32f45x_can.o
+    0x08000912   0x08000912   0x00000002   PAD
+    0x08000914   0x08000914   0x00000012   Code   RO          429    .text.can_ttcan_enable  at32f45x_can.o
+    0x08000926   0x08000926   0x00000002   PAD
+    0x08000928   0x08000928   0x0000002c   Code   RO          425    .text.can_ttcan_ref_message_set  at32f45x_can.o
+    0x08000954   0x08000954   0x00000012   Code   RO          427    .text.can_ttcan_timer_div_set  at32f45x_can.o
+    0x08000966   0x08000966   0x00000002   PAD
+    0x08000968   0x08000968   0x00000012   Code   RO          447    .text.can_ttcan_transmit_window_set  at32f45x_can.o
+    0x0800097a   0x0800097a   0x00000002   PAD
+    0x0800097c   0x0800097c   0x00000004   Code   RO          435    .text.can_ttcan_trigger_set  at32f45x_can.o
+    0x08000980   0x08000980   0x00000012   Code   RO          433    .text.can_ttcan_trigger_type_set  at32f45x_can.o
+    0x08000992   0x08000992   0x00000002   PAD
+    0x08000994   0x08000994   0x00000012   Code   RO          431    .text.can_ttcan_txbuf_enable  at32f45x_can.o
+    0x080009a6   0x080009a6   0x00000002   PAD
+    0x080009a8   0x080009a8   0x00000018   Code   RO          441    .text.can_ttcan_txbuf_status_get  at32f45x_can.o
+    0x080009c0   0x080009c0   0x0000000a   Code   RO          445    .text.can_ttcan_txbuf_transmit_set  at32f45x_can.o
+    0x080009ca   0x080009ca   0x00000002   PAD
+    0x080009cc   0x080009cc   0x00000112   Code   RO          443    .text.can_ttcan_txbuf_write  at32f45x_can.o
+    0x08000ade   0x08000ade   0x00000002   PAD
+    0x08000ae0   0x08000ae0   0x00000004   Code   RO          437    .text.can_ttcan_watch_trigger_set  at32f45x_can.o
+    0x08000ae4   0x08000ae4   0x0000002e   Code   RO          200    .text.crm_ahb_div_set  at32f45x_crm.o
+    0x08000b12   0x08000b12   0x00000002   PAD
+    0x08000b14   0x08000b14   0x0000001a   Code   RO          202    .text.crm_apb1_div_set  at32f45x_crm.o
+    0x08000b2e   0x08000b2e   0x00000002   PAD
+    0x08000b30   0x08000b30   0x0000001a   Code   RO          204    .text.crm_apb2_div_set  at32f45x_crm.o
+    0x08000b4a   0x08000b4a   0x00000002   PAD
+    0x08000b4c   0x08000b4c   0x0000001a   Code   RO          206    .text.crm_apb3_div_set  at32f45x_crm.o
+    0x08000b66   0x08000b66   0x00000002   PAD
+    0x08000b68   0x08000b68   0x00000018   Code   RO          170    .text.crm_auto_step_mode_enable  at32f45x_crm.o
+    0x08000b80   0x08000b80   0x0000003c   Code   RO          228    .text.crm_can_clock_select  at32f45x_crm.o
+    0x08000bbc   0x08000bbc   0x0000007a   Code   RO          192    .text.crm_clock_source_enable  at32f45x_crm.o
+    0x08000c36   0x08000c36   0x00000002   PAD
+    0x08000c38   0x08000c38   0x0000001a   Code   RO          176    .text.crm_flag_get  at32f45x_crm.o
+    0x08000c52   0x08000c52   0x00000002   PAD
+    0x08000c54   0x08000c54   0x00000024   Code   RO          180    .text.crm_hext_stable_wait  at32f45x_crm.o
+    0x08000c78   0x08000c78   0x00000028   Code   RO          186    .text.crm_periph_clock_enable  at32f45x_crm.o
+    0x08000ca0   0x08000ca0   0x0000004c   Code   RO          232    .text.crm_pll_config  at32f45x_crm.o
+    0x08000cec   0x08000cec   0x0000001a   Code   RO          234    .text.crm_pllu_div_set  at32f45x_crm.o
+    0x08000d06   0x08000d06   0x00000002   PAD
+    0x08000d08   0x08000d08   0x0000001a   Code   RO          236    .text.crm_pllu_output_set  at32f45x_crm.o
+    0x08000d22   0x08000d22   0x00000002   PAD
+    0x08000d24   0x08000d24   0x0000006a   Code   RO          168    .text.crm_reset     at32f45x_crm.o
+    0x08000d8e   0x08000d8e   0x00000002   PAD
+    0x08000d90   0x08000d90   0x00000026   Code   RO          238    .text.crm_sysclk_switch  at32f45x_crm.o
+    0x08000db6   0x08000db6   0x00000002   PAD
+    0x08000db8   0x08000db8   0x00000010   Code   RO          240    .text.crm_sysclk_switch_status_get  at32f45x_crm.o
+    0x08000dc8   0x08000dc8   0x0000000e   Code   RO          110    .text.gpio_default_para_init  at32f45x_gpio.o
+    0x08000dd6   0x08000dd6   0x00000002   PAD
+    0x08000dd8   0x08000dd8   0x0000007a   Code   RO          108    .text.gpio_init     at32f45x_gpio.o
+    0x08000e52   0x08000e52   0x00000002   PAD
+    0x08000e54   0x08000e54   0x00000028   Code   RO          134    .text.gpio_pin_mux_config  at32f45x_gpio.o
+    0x08000e7c   0x08000e7c   0x000000d2   Code   RO           47    .text.main          main.o
+    0x08000f4e   0x08000f4e   0x00000002   PAD
+    0x08000f50   0x08000f50   0x00000076   Code   RO          148    .text.nvic_irq_enable  at32f45x_misc.o
+    0x08000fc6   0x08000fc6   0x00000002   PAD
+    0x08000fc8   0x08000fc8   0x00000020   Code   RO          152    .text.nvic_priority_group_config  at32f45x_misc.o
+    0x08000fe8   0x08000fe8   0x000000a6   Code   RO            2    .text.system_clock_config  at32f45x_clock.o
+    0x0800108e   0x0800108e   0x00000002   PAD
+    0x08001090   0x08001090   0x00000090   Code   RO          468    .text.system_core_clock_update  system_at32f45x.o
+    0x08001120   0x08001120   0x00000018   Code   RO          158    .text.systick_clock_source_config  at32f45x_misc.o
+    0x08001138   0x08001138   0x00000078   Code   RO           45    .text.ttcan_transmit_data  main.o
+    0x080011b0   0x080011b0   0x0000000e   Code   RO          510    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x080011be   0x080011be   0x00000002   Code   RO          511    i.__scatterload_null  mc_w.l(handlers.o)
+    0x080011c0   0x080011c0   0x0000000e   Code   RO          512    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x080011ce   0x080011ce   0x00000010   Data   RO          457    .rodata.cst16       at32f45x_can.o
+    0x080011de   0x080011de   0x00000002   PAD
+    0x080011e0   0x080011e0   0x00000020   Data   RO          509    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08001200, Size: 0x00000438, Max: 0x00024000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x08001200   0x0000000c   Data   RW           93    .data.led_gpio_crm_clk  at32f45x_board.o
+    0x2000000c   0x0800120c   0x00000006   Data   RW           92    .data.led_gpio_pin  at32f45x_board.o
+    0x20000012   0x08001212   0x00000002   PAD
+    0x20000014   0x08001214   0x0000000c   Data   RW           91    .data.led_gpio_port  at32f45x_board.o
+    0x20000020   0x08001220   0x00000004   Data   RW          470    .data.system_core_clock  system_at32f45x.o
+    0x20000024   0x08001224   0x00000004   PAD
+    0x20000028        -       0x00000004   Zero   RW           96    .bss.fac_ms         at32f45x_board.o
+    0x2000002c        -       0x00000004   Zero   RW           95    .bss.fac_us         at32f45x_board.o
+    0x20000030        -       0x00000001   Zero   RW           49    .bss.ttcan_transmit_data.cnt  main.o
+    0x20000031   0x08001224   0x00000007   PAD
+    0x20000038        -       0x00000400   Zero   RW          478    STACK               startup_at32f45x.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       308          0          0         30          8      17326   at32f45x_board.o
+      1138          8         16          0          0      26218   at32f45x_can.o
+       166          0          0          0          0       9113   at32f45x_clock.o
+       720         18          0          0          0      32113   at32f45x_crm.o
+       176          0          0          0          0      12487   at32f45x_gpio.o
+       292          0          0          0          0       8907   at32f45x_int.o
+       174          0          0          0          0       7582   at32f45x_misc.o
+       578          0          0          0          1      20083   main.o
+        36          8        480          0       1024       1028   startup_at32f45x.o
+       264         32          0          4          0      11667   system_at32f45x.o
+
+    ----------------------------------------------------------------------
+      3944         66        530         36       1044     146524   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        92          0          2          2         11          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        48         10          0          0          0         68   init.o
+        36          0          0          0          0        108   memseta.o
+
+    ----------------------------------------------------------------------
+       134         18          0          0          0        176   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       134         18          0          0          0        176   mc_w.l
+
+    ----------------------------------------------------------------------
+       134         18          0          0          0        176   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      4078         84        530         36       1044     146744   Grand Totals
+      4078         84        530         36       1044     146744   ELF Image Totals
+      4078         84        530         36          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 4608 (   4.50kB)
+    Total RW  Size (RW Data + ZI Data)              1080 (   1.05kB)
+    Total ROM Size (Code + RO Data + RW Data)       4644 (   4.54kB)
+
+==============================================================================
+
